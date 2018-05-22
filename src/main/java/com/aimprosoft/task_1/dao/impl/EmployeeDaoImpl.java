@@ -58,7 +58,6 @@ public class EmployeeDaoImpl extends AbstractDao<Employee, Integer> implements E
 
     @Override
     public List<Employee> readAll(Connection connection) throws SQLException {
-        String query = QueryStorage.Employee.READ_ALL;
         PreparedStatement preparedStatement = prepareReadAll(connection);
         ResultSet resultSet = preparedStatement.executeQuery();
         return resultSetParser.getObjectList(resultSet);

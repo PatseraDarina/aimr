@@ -2,16 +2,18 @@ package com.aimprosoft.task_1.dao.impl;
 
 import com.aimprosoft.task_1.bean.Department;
 import com.aimprosoft.task_1.dao.AbstractDao;
+import com.aimprosoft.task_1.dao.DepartmentDao;
 import com.aimprosoft.task_1.dao.parser.ResultSetParser;
 import com.aimprosoft.task_1.utils.QueryStorage;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
+import java.util.List;
 
-public class DepartmentDaoImpl extends AbstractDao<Department, Integer> {
+public class DepartmentDaoImpl extends AbstractDao<Department, Integer> implements DepartmentDao {
 
-    public DepartmentDaoImpl(ResultSetParser resultSetParser) {
+    public DepartmentDaoImpl(ResultSetParser<Department> resultSetParser) {
         super(resultSetParser);
     }
 
@@ -37,4 +39,16 @@ public class DepartmentDaoImpl extends AbstractDao<Department, Integer> {
     protected PreparedStatement prepareDeleteQuery(Connection connection, Integer key) throws SQLException {
         return null;
     }
+
+    @Override
+    public List<Department> readAll(Connection connection) throws SQLException {
+        PreparedStatement preparedStatement = prepareReadAllQuery(connection);
+        return resultSetParser.getObjectList(preparedStatement.executeQuery());
+    }
+
+    private PreparedStatement prepareReadAllQuery(Connection connection) throws SQLException {
+        String query = QueryStorage.Department.READ_ALL;
+        return connection.prepareStatement(query);
+    }
+
 }

@@ -6,6 +6,8 @@ com/aimprosoft/task_1/transaction/TransactionManager.class
 com/aimprosoft/task_1/service/DepartmentService.class
 com/aimprosoft/task_1/dao/AbstractDao.class
 com/aimprosoft/task_1/dao/GenericDao.class
+com/aimprosoft/task_1/transaction/ConnectionPool.class
+com/aimprosoft/task_1/controller/DepartmentServlet.class
 com/aimprosoft/task_1/bean/Department.class
 com/aimprosoft/task_1/dao/impl/DepartmentDaoImpl.class
 com/aimprosoft/task_1/utils/QueryStorage.class

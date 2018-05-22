@@ -5,10 +5,12 @@ import com.aimprosoft.task_1.bean.Employee;
 import com.aimprosoft.task_1.controller.utils.ServletAttributes;
 import com.aimprosoft.task_1.dao.DepartmentDao;
 import com.aimprosoft.task_1.dao.EmployeeDao;
+import com.aimprosoft.task_1.dao.impl.DepartmentDaoImpl;
 import com.aimprosoft.task_1.dao.impl.EmployeeDaoImpl;
 import com.aimprosoft.task_1.dao.parser.ResultSetParser;
 import com.aimprosoft.task_1.dao.parser.impl.DepartmentParser;
 import com.aimprosoft.task_1.dao.parser.impl.EmployeeParser;
+import com.aimprosoft.task_1.service.DepartmentService;
 import com.aimprosoft.task_1.service.EmployeeService;
 import com.aimprosoft.task_1.transaction.TransactionManager;
 
@@ -52,6 +54,7 @@ public class AppContextListener implements ServletContextListener {
 
     private void initService() {
         initEmployeeService();
+        initDepartmentService();
     }
 
     private void initEmployeeService() {
@@ -61,10 +64,10 @@ public class AppContextListener implements ServletContextListener {
         servletContext.setAttribute(ServletAttributes.EMPLOYEE_SERVICE, employeeService);
     }
 
-//    private void initDepartmentService() {
-//        ResultSetParser<Department> resultSetParser = new DepartmentParser();
-//        DepartmentDao departmentDao= new Dep(resultSetParser);
-//        EmployeeService employeeService = new EmployeeService(transactionManager, employeeDao);
-//        servletContext.setAttribute(ServletAttributes.EMPLOYEE_SERVICE, employeeService);
-//    }
+    private void initDepartmentService() {
+        ResultSetParser<Department> resultSetParser = new DepartmentParser();
+        DepartmentDao departmentDao= new DepartmentDaoImpl(resultSetParser);
+        DepartmentService departmentService = new DepartmentService(transactionManager, departmentDao);
+        servletContext.setAttribute(ServletAttributes.DEPARTMENT_SERVICE, departmentService);
+    }
 }

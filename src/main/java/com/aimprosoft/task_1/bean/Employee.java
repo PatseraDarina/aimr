@@ -52,4 +52,13 @@ public class Employee extends AbstractEntity<Integer> {
     public void setIdDepartment(Integer idDepartment) {
         this.idDepartment = idDepartment;
     }
+
+    public String toString() {
+        return "Employee{" +
+                "name='" + name + '\'' +
+                ", email='" + email + '\'' +
+                ", date=" + date +
+                ", idDepartment=" + idDepartment +
+                '}';
+    }
 }

@@ -1,23 +1,24 @@
-<!DOCTYPE web-app PUBLIC
- "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
- "http://java.sun.com/dtd/web-app_2_3.dtd" >
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+         version="3.1">
 
-<web-app>
   <display-name>Departments</display-name>
   <welcome-file-list>
-    <welcome-file>mainPage</welcome-file>
+    <welcome-file>department</welcome-file>
   </welcome-file-list>
 
   <servlet>
-    <description>Show Info for main page</description>
-    <servlet-name>EmployeeServlet</servlet-name>
-    <servlet-class>com.aimprosoft.task_1.controller.EmployeeServlet</servlet-class>
-    <load-on-startup>1</load-on-startup>
+    <description>Show Info about departments</description>
+    <servlet-name>DepartmentServlet</servlet-name>
+    <servlet-class>com.aimprosoft.task_1.controller.DepartmentServlet</servlet-class>
+    <load-on-startup>0</load-on-startup>
   </servlet>
 
   <servlet-mapping>
-    <servlet-name>EmployeeServlet</servlet-name>
-    <url-pattern>/mainPage</url-pattern>
+    <servlet-name>DepartmentServlet</servlet-name>
+    <url-pattern>/department</url-pattern>
   </servlet-mapping>
 
   <resource-ref>

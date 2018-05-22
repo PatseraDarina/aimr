@@ -32,7 +32,9 @@ public class EmployeeParser implements ResultSetParser<Employee> {
         Employee employee = new Employee();
         employee.setId(resultSet.getInt(1));
         employee.setName(resultSet.getString(2));
-        employee.setDate(resultSet.getDate(3));
+        employee.setEmail(resultSet.getString(3));
+        employee.setDate(resultSet.getDate(4));
+        employee.setIdDepartment(resultSet.getInt(5));
         return employee;
     }
 }
