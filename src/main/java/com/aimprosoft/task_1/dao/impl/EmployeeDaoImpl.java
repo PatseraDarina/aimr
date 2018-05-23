@@ -4,7 +4,7 @@ import com.aimprosoft.task_1.bean.Employee;
 import com.aimprosoft.task_1.dao.AbstractDao;
 import com.aimprosoft.task_1.dao.EmployeeDao;
 import com.aimprosoft.task_1.dao.parser.ResultSetParser;
-import com.aimprosoft.task_1.utils.QueryStorage;
+import com.aimprosoft.task_1.dao.utils.QueryStorage;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;

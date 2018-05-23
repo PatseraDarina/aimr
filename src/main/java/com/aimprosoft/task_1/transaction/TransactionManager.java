@@ -1,7 +1,7 @@
 package com.aimprosoft.task_1.transaction;
 
 import com.aimprosoft.task_1.exception.TransactionInterruptedException;
-import com.aimprosoft.task_1.utils.Message;
+import com.aimprosoft.task_1.utils.Constant;
 
 import javax.sql.DataSource;
 import java.sql.Connection;
@@ -34,7 +34,7 @@ public class TransactionManager {
                 connection.commit();
                 return result;
             }
-            exceptionMessage = Message.NO_CONNECTION;
+            exceptionMessage = Constant.Exception.NO_CONNECTION;
         } catch (SQLException e) {
             exceptionMessage = e.getMessage();
             exceptionMessage = rollback(connection, exceptionMessage);

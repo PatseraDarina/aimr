@@ -1,4 +1,4 @@
-package com.aimprosoft.task_1.utils;
+package com.aimprosoft.task_1.dao.utils;
 
 public final class QueryStorage {
 
@@ -21,5 +21,6 @@ public final class QueryStorage {
         public static final String UPDATE = "UPDATE department SET NAME = ? WHERE ID = ?";
         public static final String DELETE = "DELETE FROM department WHERE ID=?";
         public static final String READ_ALL = "SELECT * FROM department";
+        public static final String READ_BY_NAME = "SELECT * FROM department WHERE NAME = ?";
     }
 }

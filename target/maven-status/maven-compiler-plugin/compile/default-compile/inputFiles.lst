@@ -1,4 +1,5 @@
 /home/dpatsera/IdeaProjects/task_1/src/main/java/com/aimprosoft/task_1/exception/TransactionInterruptedException.java
+/home/dpatsera/IdeaProjects/task_1/src/main/java/com/aimprosoft/task_1/exception/DataUniquenessException.java
 /home/dpatsera/IdeaProjects/task_1/src/main/java/com/aimprosoft/task_1/dao/parser/impl/DepartmentParser.java
 /home/dpatsera/IdeaProjects/task_1/src/main/java/com/aimprosoft/task_1/dao/EmployeeDao.java
 /home/dpatsera/IdeaProjects/task_1/src/main/java/com/aimprosoft/task_1/dao/AbstractEntity.java
@@ -7,16 +8,17 @@
 /home/dpatsera/IdeaProjects/task_1/src/main/java/com/aimprosoft/task_1/transaction/Operation.java
 /home/dpatsera/IdeaProjects/task_1/src/main/java/com/aimprosoft/task_1/dao/impl/EmployeeDaoImpl.java
 /home/dpatsera/IdeaProjects/task_1/src/main/java/com/aimprosoft/task_1/dao/Entity.java
-/home/dpatsera/IdeaProjects/task_1/src/main/java/com/aimprosoft/task_1/transaction/ConnectionPool.java
+/home/dpatsera/IdeaProjects/task_1/src/main/java/com/aimprosoft/task_1/utils/Constant.java
 /home/dpatsera/IdeaProjects/task_1/src/main/java/com/aimprosoft/task_1/dao/impl/DepartmentDaoImpl.java
 /home/dpatsera/IdeaProjects/task_1/src/main/java/com/aimprosoft/task_1/dao/parser/ResultSetParser.java
-/home/dpatsera/IdeaProjects/task_1/src/main/java/com/aimprosoft/task_1/controller/utils/ServletAttributes.java
-/home/dpatsera/IdeaProjects/task_1/src/main/java/com/aimprosoft/task_1/utils/QueryStorage.java
+/home/dpatsera/IdeaProjects/task_1/src/main/java/com/aimprosoft/task_1/validator/DepartmentValidator.java
 /home/dpatsera/IdeaProjects/task_1/src/main/java/com/aimprosoft/task_1/bean/Employee.java
 /home/dpatsera/IdeaProjects/task_1/src/main/java/com/aimprosoft/task_1/service/EmployeeService.java
-/home/dpatsera/IdeaProjects/task_1/src/main/java/com/aimprosoft/task_1/utils/Message.java
+/home/dpatsera/IdeaProjects/task_1/src/main/java/com/aimprosoft/task_1/validator/EmployeeValidator.java
+/home/dpatsera/IdeaProjects/task_1/src/main/java/com/aimprosoft/task_1/controller/utils/Validator.java
 /home/dpatsera/IdeaProjects/task_1/src/main/java/com/aimprosoft/task_1/service/DepartmentService.java
 /home/dpatsera/IdeaProjects/task_1/src/main/java/com/aimprosoft/task_1/listeners/AppContextListener.java
+/home/dpatsera/IdeaProjects/task_1/src/main/java/com/aimprosoft/task_1/dao/utils/QueryStorage.java
 /home/dpatsera/IdeaProjects/task_1/src/main/java/com/aimprosoft/task_1/bean/Department.java
 /home/dpatsera/IdeaProjects/task_1/src/main/java/com/aimprosoft/task_1/controller/DepartmentServlet.java
 /home/dpatsera/IdeaProjects/task_1/src/main/java/com/aimprosoft/task_1/dao/AbstractDao.java

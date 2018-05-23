@@ -4,7 +4,7 @@ import com.aimprosoft.task_1.bean.Department;
 import com.aimprosoft.task_1.dao.AbstractDao;
 import com.aimprosoft.task_1.dao.DepartmentDao;
 import com.aimprosoft.task_1.dao.parser.ResultSetParser;
-import com.aimprosoft.task_1.utils.QueryStorage;
+import com.aimprosoft.task_1.dao.utils.QueryStorage;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -27,17 +27,37 @@ public class DepartmentDaoImpl extends AbstractDao<Department, Integer> implemen
 
     @Override
     protected PreparedStatement prepareReadQuery(Connection connection, Integer key) throws SQLException {
-        return null;
+        String query = QueryStorage.Department.READ;
+        PreparedStatement preparedStatement = connection.prepareStatement(query);
+        preparedStatement.setInt(1, key);
+        return preparedStatement;
     }
 
     @Override
     protected PreparedStatement prepareUpdateQuery(Connection connection, Department entity) throws SQLException {
-        return null;
+        String query = QueryStorage.Department.UPDATE;
+        PreparedStatement preparedStatement = connection.prepareStatement(query);
+        preparedStatement.setString(1, entity.getName());
+        preparedStatement.setInt(2, entity.getId());
+        return preparedStatement;
     }
 
     @Override
     protected PreparedStatement prepareDeleteQuery(Connection connection, Integer key) throws SQLException {
-        return null;
+        String query = QueryStorage.Department.DELETE;
+        PreparedStatement preparedStatement = connection.prepareStatement(query);
+        preparedStatement.setInt(1, key);
+        return preparedStatement;
+    }
+
+    private PreparedStatement prepareReadByEmailQuery(Connection connection) throws SQLException {
+        String query = QueryStorage.Department.READ_BY_NAME;
+        return connection.prepareStatement(query);
+    }
+
+    private PreparedStatement prepareReadAllQuery(Connection connection) throws SQLException {
+        String query = QueryStorage.Department.READ_ALL;
+        return connection.prepareStatement(query);
     }
 
     @Override
@@ -46,9 +66,11 @@ public class DepartmentDaoImpl extends AbstractDao<Department, Integer> implemen
         return resultSetParser.getObjectList(preparedStatement.executeQuery());
     }
 
-    private PreparedStatement prepareReadAllQuery(Connection connection) throws SQLException {
-        String query = QueryStorage.Department.READ_ALL;
-        return connection.prepareStatement(query);
+    @Override
+    public Department readByName(Connection connection, Department department) throws SQLException {
+        PreparedStatement preparedStatement = prepareReadByEmailQuery(connection);
+        preparedStatement.setString(1, department.getName());
+        return resultSetParser.getObject(preparedStatement.executeQuery());
     }
 
 }

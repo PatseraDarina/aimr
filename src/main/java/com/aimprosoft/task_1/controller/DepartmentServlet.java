@@ -1,44 +1,100 @@
 package com.aimprosoft.task_1.controller;
 
 import com.aimprosoft.task_1.bean.Department;
-import com.aimprosoft.task_1.controller.utils.ServletAttributes;
+import com.aimprosoft.task_1.exception.DataUniquenessException;
 import com.aimprosoft.task_1.exception.TransactionInterruptedException;
 import com.aimprosoft.task_1.service.DepartmentService;
+import com.aimprosoft.task_1.utils.Constant;
+import com.aimprosoft.task_1.validator.DepartmentValidator;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.util.List;
+import java.util.Map;
 
 public class DepartmentServlet extends HttpServlet {
 
     private DepartmentService departmentService;
+    private DepartmentValidator departmentValidator;
 
     @Override
     public void init() {
-        departmentService = (DepartmentService) getServletContext().getAttribute(ServletAttributes.DEPARTMENT_SERVICE);
+        departmentService = (DepartmentService) getServletContext().getAttribute(Constant.Attribute.DEPARTMENT_SERVICE);
+        departmentValidator = (DepartmentValidator) getServletContext().getAttribute(Constant.Attribute.DEPARTMENT_VALIDATOR);
     }
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         try {
             List<Department> departmentList = departmentService.getAll();
-            req.setAttribute(ServletAttributes.DEPARTMENTS, departmentList);
-            req.getRequestDispatcher(ServletAttributes.INDEX_JSP).forward(req, resp);
+            req.setAttribute(Constant.Attribute.DEPARTMENTS, departmentList);
+            req.getRequestDispatcher(Constant.JSP.INDEX).forward(req, resp);
         } catch (TransactionInterruptedException e) {
             e.printStackTrace();
         }
     }
 
     @Override
-    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
+        HttpSession session = req.getSession(true);
+        Department department = new Department();
+        department.setName(req.getParameter(Constant.Attribute.DEPARTMENT_NAME));
+        Map<String, String> errors = departmentValidator.validate(department);
+        if (errors.isEmpty()) {
+            try {
+                departmentService.add(department);
+                session.setAttribute(Constant.Attribute.INFO, Constant.Message.ADD_SUCCESS);
+                resp.sendRedirect(Constant.JSP.ADD_DEPARTMENTS);
+            } catch (TransactionInterruptedException e) {
+                e.printStackTrace();
+            } catch (DataUniquenessException e) {
+                session.setAttribute(Constant.Attribute.INFO, e.getMessage());
+                session.setAttribute(Constant.Attribute.DEPARTMENT, department);
+                req.getRequestDispatcher(Constant.JSP.ADD_DEPARTMENTS).include(req, resp);
+            }
+        } else {
+            session.setAttribute(Constant.Attribute.ERRORS, errors);
+            session.setAttribute(Constant.Attribute.DEPARTMENT, department);
+            req.getRequestDispatcher(Constant.JSP.ADD_DEPARTMENTS).include(req, resp);
+        }
+        errors.clear();
+    }
+
+    @Override
+    protected void doDelete(HttpServletRequest req, HttpServletResponse resp) {
+        Department department = new Department();
+        department.setId(Integer.valueOf(req.getParameter(Constant.Attribute.DEPARTMENT_ID)));
         try {
-            Department department = new Department();
-            departmentService.add(department);
+            departmentService.delete(department.getId());
         } catch (TransactionInterruptedException e) {
             e.printStackTrace();
         }
+    }
+
+    @Override
+    protected void doPut(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        HttpSession session = req.getSession();
+        Department department = new Department();
+        department.setId(Integer.valueOf(req.getParameter(Constant.Attribute.DEPARTMENT_ID)));
+        department.setName(req.getParameter(Constant.Attribute.DEPARTMENT_NAME));
+        Map<String, String> errors = departmentValidator.validate(department);
+        if (errors.isEmpty()) {
+            try {
+                departmentService.update(department);
+            } catch (TransactionInterruptedException e) {
+                e.printStackTrace();
+            } catch (DataUniquenessException e) {
+                session.setAttribute(Constant.Attribute.INFO, e.getMessage());
+                session.setAttribute(Constant.Attribute.DEPARTMENT, department);
+               // req.getRequestDispatcher(Constant.JSP.ADD_DEPARTMENTS).include(req, resp);
+            }
+        } else {
+            session.setAttribute(Constant.Attribute.ERRORS, errors);
+        }
+        errors.clear();
     }
 }

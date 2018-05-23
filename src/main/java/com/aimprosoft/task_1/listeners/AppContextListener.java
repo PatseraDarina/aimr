@@ -2,7 +2,6 @@ package com.aimprosoft.task_1.listeners;
 
 import com.aimprosoft.task_1.bean.Department;
 import com.aimprosoft.task_1.bean.Employee;
-import com.aimprosoft.task_1.controller.utils.ServletAttributes;
 import com.aimprosoft.task_1.dao.DepartmentDao;
 import com.aimprosoft.task_1.dao.EmployeeDao;
 import com.aimprosoft.task_1.dao.impl.DepartmentDaoImpl;
@@ -13,6 +12,8 @@ import com.aimprosoft.task_1.dao.parser.impl.EmployeeParser;
 import com.aimprosoft.task_1.service.DepartmentService;
 import com.aimprosoft.task_1.service.EmployeeService;
 import com.aimprosoft.task_1.transaction.TransactionManager;
+import com.aimprosoft.task_1.utils.Constant;
+import com.aimprosoft.task_1.validator.DepartmentValidator;
 
 import javax.naming.Context;
 import javax.naming.InitialContext;
@@ -61,13 +62,17 @@ public class AppContextListener implements ServletContextListener {
         ResultSetParser<Employee> resultSetParser = new EmployeeParser();
         EmployeeDao employeeDao = new EmployeeDaoImpl(resultSetParser);
         EmployeeService employeeService = new EmployeeService(transactionManager, employeeDao);
-        servletContext.setAttribute(ServletAttributes.EMPLOYEE_SERVICE, employeeService);
+        servletContext.setAttribute(Constant.Attribute.EMPLOYEE_SERVICE, employeeService);
     }
 
     private void initDepartmentService() {
         ResultSetParser<Department> resultSetParser = new DepartmentParser();
         DepartmentDao departmentDao= new DepartmentDaoImpl(resultSetParser);
         DepartmentService departmentService = new DepartmentService(transactionManager, departmentDao);
-        servletContext.setAttribute(ServletAttributes.DEPARTMENT_SERVICE, departmentService);
+        servletContext.setAttribute(Constant.Attribute.DEPARTMENT_SERVICE, departmentService);
+
+        DepartmentValidator departmentValidator = new DepartmentValidator();
+        servletContext.setAttribute(Constant.Attribute.DEPARTMENT_VALIDATOR, departmentValidator);
     }
+
 }

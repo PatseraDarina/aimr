@@ -1,9 +1,9 @@
 package com.aimprosoft.task_1.controller;
 
 import com.aimprosoft.task_1.bean.Employee;
-import com.aimprosoft.task_1.controller.utils.ServletAttributes;
 import com.aimprosoft.task_1.exception.TransactionInterruptedException;
 import com.aimprosoft.task_1.service.EmployeeService;
+import com.aimprosoft.task_1.utils.Constant;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -13,22 +13,21 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.List;
 
-@WebServlet
+@WebServlet("/employee")
 public class EmployeeServlet extends HttpServlet {
 
     private EmployeeService service;
 
     @Override
     public void init() {
-        service = (EmployeeService) getServletContext().getAttribute(ServletAttributes.EMPLOYEE_SERVICE);
+        service = (EmployeeService) getServletContext().getAttribute(Constant.Attribute.EMPLOYEE_SERVICE);
     }
 
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        List<Employee> employees;
         try {
-            employees = service.getAll();
-            req.setAttribute(ServletAttributes.EMPLOYEES, employees);
-            req.getRequestDispatcher(ServletAttributes.INDEX_JSP).forward(req, resp);
+            List<Employee> employees = service.getAll();
+            req.setAttribute(Constant.Attribute.EMPLOYEES, employees);
+            req.getRequestDispatcher(Constant.JSP.EMPLOYEE).forward(req, resp);
         } catch (TransactionInterruptedException e) {
             e.printStackTrace();
         }
