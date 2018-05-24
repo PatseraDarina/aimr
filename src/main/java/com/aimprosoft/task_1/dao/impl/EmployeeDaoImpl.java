@@ -25,6 +25,7 @@ public class EmployeeDaoImpl extends AbstractDao<Employee, Integer> implements E
         preparedStatement.setString(1, entity.getName());
         preparedStatement.setString(2, entity.getEmail());
         preparedStatement.setDate(3, entity.getDate());
+        preparedStatement.setInt(4, entity.getIdDepartment());
         return preparedStatement;
     }
 
@@ -61,6 +62,31 @@ public class EmployeeDaoImpl extends AbstractDao<Employee, Integer> implements E
         PreparedStatement preparedStatement = prepareReadAll(connection);
         ResultSet resultSet = preparedStatement.executeQuery();
         return resultSetParser.getObjectList(resultSet);
+    }
+
+    @Override
+    public List<Employee> readByIdDepartment(Connection connection, Integer idDepartment) throws SQLException {
+        PreparedStatement preparedStatement = prepareReadByIdDepartment(connection);
+        preparedStatement.setInt(1, idDepartment);
+       return resultSetParser.getObjectList(preparedStatement.executeQuery());
+    }
+
+    @Override
+    public Employee readByEmail(Connection connection, String email) throws SQLException {
+        PreparedStatement preparedStatement = prepareReadByEmailQuery(connection, email);
+        return resultSetParser.getObject(preparedStatement.executeQuery());
+    }
+
+    private PreparedStatement prepareReadByEmailQuery(Connection connection, String email) throws SQLException {
+        String query = QueryStorage.Employee.READ_BY_EMAIL;
+        PreparedStatement preparedStatement = connection.prepareStatement(query);
+        preparedStatement.setString(1, email);
+        return preparedStatement;
+    }
+
+    private PreparedStatement prepareReadByIdDepartment(Connection connection) throws SQLException {
+        String query = QueryStorage.Employee.READ_ALL_BY_DEPARTMENT;
+        return connection.prepareStatement(query);
     }
 
     private PreparedStatement prepareReadAll(Connection connection) throws SQLException {

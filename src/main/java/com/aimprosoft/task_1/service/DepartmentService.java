@@ -53,9 +53,15 @@ public class DepartmentService {
         }
     }
 
+
+    public Department getByName(String name) throws TransactionInterruptedException {
+        return transactionManager.doTransaction(connection -> departmentDao.readByName(connection, name));
+    }
+
     private boolean isExist(Department department) throws TransactionInterruptedException {
         return (Objects.nonNull(transactionManager.doTransaction(connection ->
-                departmentDao.readByName(connection, department)
+                departmentDao.readByName(connection, department.getName())
         )));
     }
+
 }

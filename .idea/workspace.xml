@@ -2,40 +2,39 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="acd52140-7942-464c-9b76-9f575731c793" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/aimprosoft/task_1/exception/DataUniquenessException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/aimprosoft/task_1/utils/Constant.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/aimprosoft/task_1/validator/DepartmentValidator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/aimprosoft/task_1/validator/EmployeeValidator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/addEmployee.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/jquery.min.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/aimprosoft/task_1/controller/DepartmentServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aimprosoft/task_1/controller/DepartmentServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/aimprosoft/task_1/controller/EmployeeServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aimprosoft/task_1/controller/EmployeeServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/aimprosoft/task_1/controller/utils/ServletAttributes.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/aimprosoft/task_1/controller/utils/Validator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aimprosoft/task_1/controller/utils/Validator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/aimprosoft/task_1/dao/DepartmentDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aimprosoft/task_1/dao/DepartmentDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/aimprosoft/task_1/dao/EmployeeDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aimprosoft/task_1/dao/EmployeeDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/aimprosoft/task_1/dao/impl/DepartmentDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aimprosoft/task_1/dao/impl/DepartmentDaoImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/aimprosoft/task_1/dao/impl/EmployeeDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aimprosoft/task_1/dao/impl/EmployeeDaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/aimprosoft/task_1/dao/utils/QueryStorage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aimprosoft/task_1/dao/utils/QueryStorage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/aimprosoft/task_1/listeners/AppContextListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aimprosoft/task_1/listeners/AppContextListener.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/aimprosoft/task_1/service/DepartmentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aimprosoft/task_1/service/DepartmentService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/aimprosoft/task_1/transaction/ConnectionPool.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/aimprosoft/task_1/transaction/TransactionManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aimprosoft/task_1/transaction/TransactionManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/aimprosoft/task_1/utils/Message.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/aimprosoft/task_1/utils/QueryStorage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aimprosoft/task_1/dao/utils/QueryStorage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/aimprosoft/task_1/service/EmployeeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aimprosoft/task_1/service/EmployeeService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/aimprosoft/task_1/utils/Constant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aimprosoft/task_1/utils/Constant.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/aimprosoft/task_1/validator/EmployeeValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/aimprosoft/task_1/validator/EmployeeValidator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/addDepartment.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/addDepartment.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/addEmployee.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/addEmployee.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/css/add_style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/css/add_style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/editDepartment.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/employee.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/employee.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/check_all.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/jquery.sticky.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/js/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/addDepartment.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/addDepartment.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/owl.carousel.min.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/aimprosoft/task_1/controller/EmployeeServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/aimprosoft/task_1/controller/EmployeeServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/aimprosoft/task_1/controller/utils/ServletAttributes.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/aimprosoft/task_1/dao/DepartmentDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/aimprosoft/task_1/dao/DepartmentDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/aimprosoft/task_1/dao/EmployeeDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/aimprosoft/task_1/dao/EmployeeDao.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/aimprosoft/task_1/dao/impl/DepartmentDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/aimprosoft/task_1/dao/impl/DepartmentDaoImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/aimprosoft/task_1/dao/impl/EmployeeDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/aimprosoft/task_1/dao/impl/EmployeeDaoImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/aimprosoft/task_1/listeners/AppContextListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/aimprosoft/task_1/listeners/AppContextListener.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/aimprosoft/task_1/service/DepartmentService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/aimprosoft/task_1/service/DepartmentService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/aimprosoft/task_1/transaction/TransactionManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/aimprosoft/task_1/transaction/TransactionManager.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/aimprosoft/task_1/utils/Message.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/aimprosoft/task_1/utils/QueryStorage$Department.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/aimprosoft/task_1/utils/QueryStorage$Employee.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/aimprosoft/task_1/utils/QueryStorage.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/aimprosoft/task_1/service/EmployeeService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/aimprosoft/task_1/service/EmployeeService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
     </list>
@@ -52,8 +51,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/aimprosoft/task_1/controller/DepartmentServlet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="299">
-              <caret line="37" column="9" selection-start-line="31" selection-start-column="8" selection-end-line="37" selection-end-column="9" />
+            <state relative-caret-position="-42">
+              <caret line="54" column="57" selection-start-line="54" selection-start-column="57" selection-end-line="54" selection-end-column="57" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/aimprosoft/task_1/controller/EmployeeServlet.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-31">
+              <caret line="37" selection-start-line="37" selection-end-line="37" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -62,10 +73,19 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/aimprosoft/task_1/controller/EmployeeServlet.java">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/addDepartment.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="28" column="56" selection-start-line="28" selection-start-column="56" selection-end-line="28" selection-end-column="56" />
+            <state relative-caret-position="-9">
+              <caret line="20" selection-start-line="20" selection-end-line="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/aimprosoft/task_1/controller/ShowDepartmentPage.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="345">
+              <caret line="23" selection-start-line="23" selection-end-line="23" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -76,8 +96,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/aimprosoft/task_1/utils/Constant.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="11" column="62" selection-start-line="11" selection-start-column="62" selection-end-line="11" selection-end-column="62" />
+            <state relative-caret-position="309">
+              <caret line="37" column="33" selection-start-line="37" selection-start-column="33" selection-end-line="37" selection-end-column="33" />
             </state>
           </provider>
         </entry>
@@ -85,17 +105,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/index.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="39" column="20" selection-start-line="39" selection-start-column="20" selection-end-line="39" selection-end-column="20" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/employee.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1650">
-              <caret line="110" column="62" selection-start-line="110" selection-start-column="62" selection-end-line="110" selection-end-column="62" />
+            <state relative-caret-position="160">
+              <caret line="25" column="37" selection-start-line="25" selection-start-column="37" selection-end-line="25" selection-end-column="37" />
             </state>
           </provider>
         </entry>
@@ -103,47 +114,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/js/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="15" column="41" selection-start-line="15" selection-start-column="16" selection-end-line="15" selection-end-column="41" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/aimprosoft/task_1/service/DepartmentService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="284">
-              <caret line="51" selection-start-line="51" selection-end-line="51" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/aimprosoft/task_1/transaction/TransactionManager.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="32" selection-start-line="32" selection-end-line="32" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/addDepartment.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="17" column="14" selection-start-line="17" selection-start-column="14" selection-end-line="17" selection-end-column="14" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/editDepartment.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="17" column="92" selection-start-line="17" selection-start-column="92" selection-end-line="17" selection-end-column="92" />
+            <state relative-caret-position="289">
+              <caret line="73" column="13" selection-start-line="73" selection-start-column="13" selection-end-line="73" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -165,6 +137,8 @@
       <find>addPeriod</find>
       <find>mytable</find>
       <find>departmen</find>
+      <find>mytab</find>
+      <find>employeeName</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -177,11 +151,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/java/com/aimprosoft/task_1/dao/parser/impl/EmployeeParser.java" />
-        <option value="$PROJECT_DIR$/src/java/com/aimprosoft/task_1/dao/parser/impl/DepartmentParser.java" />
-        <option value="$PROJECT_DIR$/src/java/com/aimprosoft/task_1/dao/impl/EmployeeDaoImpl.java" />
-        <option value="$PROJECT_DIR$/src/java/com/aimprosoft/task_1/transaction/Operation.java" />
-        <option value="$PROJECT_DIR$/src/java/com/aimprosoft/task_1/exception/TransactionManagerException.java" />
         <option value="$PROJECT_DIR$/src/java/com/aimprosoft/task_1/transaction/TransactionManager.java" />
         <option value="$PROJECT_DIR$/src/java/com/aimprosoft/task_1/service/EmployeeService.java" />
         <option value="$PROJECT_DIR$/src/java/com/aimprosoft/task_1/dao/DepartmentDao.java" />
@@ -194,40 +163,45 @@
         <option value="$PROJECT_DIR$/src/java/com/aimprosoft/task_1/listener/AppContextListener.java" />
         <option value="$PROJECT_DIR$/src/java/com/aimprosoft/task_1/controller/utils/ServletAttributes.java" />
         <option value="$PROJECT_DIR$/src/java/com/aimprosoft/task_1/listeners/AppContextListener.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/aimprosoft/task_1/service/EmployeeService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/aimprosoft/task_1/transaction/ConnectionPool.java" />
         <option value="$PROJECT_DIR$/target/task1/META-INF/context.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/aimprosoft/task_1/dao/impl/EmployeeDaoImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/aimprosoft/task_1/dao/parser/impl/EmployeeParser.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/META-INF/context.xml" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/aimprosoft/task_1/bean/Employee.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/css/add_style.css" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/aimprosoft/task_1/utils/QueryStorage.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/jsp/addDepartment.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/com/aimprosoft/task_1/controller/utils/ServletAttributes.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/aimprosoft/task_1/exception/utils/Message.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/aimprosoft/task_1/controller/utils/Validator.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/aimprosoft/task_1/exception/InvalidDataException.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/aimprosoft/task_1/transaction/TransactionManager.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/aimprosoft/task_1/validator/DepartmentValidator.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/aimprosoft/task_1/exception/DataUniquenessException.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/editDepartment" />
+        <option value="$PROJECT_DIR$/src/main/java/com/aimprosoft/task_1/controller/ShowDepartmentServlet.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/aimprosoft/task_1/listeners/AppContextListener.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/addDepartment.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/com/aimprosoft/task_1/dao/DepartmentDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/aimprosoft/task_1/dao/impl/DepartmentDaoImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/aimprosoft/task_1/dao/utils/QueryStorage.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/aimprosoft/task_1/service/DepartmentService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/aimprosoft/task_1/controller/DepartmentServlet.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/editDepartment" />
+        <option value="$PROJECT_DIR$/src/main/java/com/aimprosoft/task_1/dao/EmployeeDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/aimprosoft/task_1/dao/impl/EmployeeDaoImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/aimprosoft/task_1/dao/utils/QueryStorage.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/aimprosoft/task_1/service/EmployeeService.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/js/jquery.min.js" />
         <option value="$PROJECT_DIR$/src/main/webapp/editDepartment.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/js/main.js" />
-        <option value="$PROJECT_DIR$/src/main/webapp/addEmployee.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/employee.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/index.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/com/aimprosoft/task_1/utils/Constant.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/aimprosoft/task_1/controller/utils/Validator.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/aimprosoft/task_1/validator/EmployeeValidator.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/addEmployee.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
+        <option value="$PROJECT_DIR$/src/main/webapp/css/add_style.css" />
         <option value="$PROJECT_DIR$/src/main/java/com/aimprosoft/task_1/controller/EmployeeServlet.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/aimprosoft/task_1/controller/ShowDepartmentPage.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/index.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/js/main.js" />
+        <option value="$PROJECT_DIR$/src/main/java/com/aimprosoft/task_1/controller/DepartmentServlet.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/aimprosoft/task_1/utils/Constant.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/addDepartment.jsp" />
       </list>
     </option>
   </component>
@@ -266,9 +240,9 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="877" />
+    <option name="x" value="699" />
     <option name="y" value="25" />
-    <option name="width" value="803" />
+    <option name="width" value="981" />
     <option name="height" value="1025" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -280,6 +254,9 @@
       <dailyData date="23-5-2018">
         <observation name="false" value="405.0" />
       </dailyData>
+      <dailyData date="24-5-2018">
+        <observation name="false" value="327.0" />
+      </dailyData>
     </factor>
     <factor id="binaryFeature:liftShorterClasses">
       <dailyData date="22-5-2018">
@@ -290,6 +267,10 @@
         <observation name="UNDEFINED" value="55.0" />
         <observation name="false" value="350.0" />
       </dailyData>
+      <dailyData date="24-5-2018">
+        <observation name="UNDEFINED" value="60.0" />
+        <observation name="false" value="267.0" />
+      </dailyData>
     </factor>
     <factor id="binaryFeature:middleMatching">
       <dailyData date="22-5-2018">
@@ -297,6 +278,10 @@
       </dailyData>
       <dailyData date="23-5-2018">
         <observation name="false" value="403.0" />
+        <observation name="true" value="2.0" />
+      </dailyData>
+      <dailyData date="24-5-2018">
+        <observation name="false" value="325.0" />
         <observation name="true" value="2.0" />
       </dailyData>
     </factor>
@@ -310,6 +295,11 @@
         <observation name="1" value="1.0" />
         <observation name="UNDEFINED" value="229.0" />
       </dailyData>
+      <dailyData date="24-5-2018">
+        <observation name="0" value="153.0" />
+        <observation name="1" value="1.0" />
+        <observation name="UNDEFINED" value="173.0" />
+      </dailyData>
     </factor>
     <factor id="binaryFeature:prox_inResolveScope">
       <dailyData date="22-5-2018">
@@ -321,6 +311,11 @@
         <observation name="UNDEFINED" value="51.0" />
         <observation name="false" value="69.0" />
         <observation name="true" value="285.0" />
+      </dailyData>
+      <dailyData date="24-5-2018">
+        <observation name="UNDEFINED" value="54.0" />
+        <observation name="false" value="28.0" />
+        <observation name="true" value="245.0" />
       </dailyData>
     </factor>
     <factor id="binaryFeature:prox_openedInEditor">
@@ -334,6 +329,11 @@
         <observation name="false" value="199.0" />
         <observation name="true" value="155.0" />
       </dailyData>
+      <dailyData date="24-5-2018">
+        <observation name="UNDEFINED" value="54.0" />
+        <observation name="false" value="151.0" />
+        <observation name="true" value="122.0" />
+      </dailyData>
     </factor>
     <factor id="binaryFeature:prox_sameDirectory">
       <dailyData date="22-5-2018">
@@ -345,6 +345,11 @@
         <observation name="UNDEFINED" value="51.0" />
         <observation name="false" value="252.0" />
         <observation name="true" value="102.0" />
+      </dailyData>
+      <dailyData date="24-5-2018">
+        <observation name="UNDEFINED" value="54.0" />
+        <observation name="false" value="187.0" />
+        <observation name="true" value="86.0" />
       </dailyData>
     </factor>
     <factor id="binaryFeature:prox_sameLogicalRoot">
@@ -358,6 +363,11 @@
         <observation name="false" value="139.0" />
         <observation name="true" value="215.0" />
       </dailyData>
+      <dailyData date="24-5-2018">
+        <observation name="UNDEFINED" value="54.0" />
+        <observation name="false" value="89.0" />
+        <observation name="true" value="184.0" />
+      </dailyData>
     </factor>
     <factor id="binaryFeature:prox_sdkOrLibrary">
       <dailyData date="22-5-2018">
@@ -369,6 +379,11 @@
         <observation name="false" value="308.0" />
         <observation name="true" value="46.0" />
       </dailyData>
+      <dailyData date="24-5-2018">
+        <observation name="UNDEFINED" value="54.0" />
+        <observation name="false" value="242.0" />
+        <observation name="true" value="31.0" />
+      </dailyData>
     </factor>
     <factor id="binaryFeature:templates">
       <dailyData date="22-5-2018">
@@ -377,6 +392,10 @@
       <dailyData date="23-5-2018">
         <observation name="false" value="403.0" />
         <observation name="true" value="2.0" />
+      </dailyData>
+      <dailyData date="24-5-2018">
+        <observation name="false" value="326.0" />
+        <observation name="true" value="1.0" />
       </dailyData>
     </factor>
     <factor id="categoricalFeature:accessible">
@@ -387,6 +406,10 @@
       <dailyData date="23-5-2018">
         <observation name="NORMAL" value="355.0" />
         <observation name="UNDEFINED" value="50.0" />
+      </dailyData>
+      <dailyData date="24-5-2018">
+        <observation name="NORMAL" value="272.0" />
+        <observation name="UNDEFINED" value="55.0" />
       </dailyData>
     </factor>
     <factor id="categoricalFeature:expectedType">
@@ -401,6 +424,12 @@
         <observation name="expected" value="88.0" />
         <observation name="maybeExpected" value="12.0" />
         <observation name="normal" value="255.0" />
+      </dailyData>
+      <dailyData date="24-5-2018">
+        <observation name="UNDEFINED" value="55.0" />
+        <observation name="expected" value="95.0" />
+        <observation name="maybeExpected" value="3.0" />
+        <observation name="normal" value="174.0" />
       </dailyData>
     </factor>
     <factor id="categoricalFeature:kind">
@@ -425,6 +454,16 @@
         <observation name="superMethodParameters" value="1.0" />
         <observation name="variable" value="73.0" />
       </dailyData>
+      <dailyData date="24-5-2018">
+        <observation name="OTHER" value="3.0" />
+        <observation name="UNDEFINED" value="55.0" />
+        <observation name="classNameOrGlobalStatic" value="76.0" />
+        <observation name="expectedTypeVariable" value="18.0" />
+        <observation name="normal" value="94.0" />
+        <observation name="probableKeyword" value="14.0" />
+        <observation name="suitableClass" value="2.0" />
+        <observation name="variable" value="65.0" />
+      </dailyData>
     </factor>
     <factor id="categoricalFeature:prox_groovyReferenceListWeigher">
       <dailyData date="22-5-2018">
@@ -434,6 +473,10 @@
       <dailyData date="23-5-2018">
         <observation name="UNDEFINED" value="51.0" />
         <observation name="unknown" value="354.0" />
+      </dailyData>
+      <dailyData date="24-5-2018">
+        <observation name="UNDEFINED" value="54.0" />
+        <observation name="unknown" value="273.0" />
       </dailyData>
     </factor>
     <factor id="categoricalFeature:prox_javaInheritance">
@@ -448,6 +491,11 @@
         <observation name="null" value="255.0" />
         <observation name="true" value="2.0" />
       </dailyData>
+      <dailyData date="24-5-2018">
+        <observation name="UNDEFINED" value="54.0" />
+        <observation name="false" value="78.0" />
+        <observation name="null" value="195.0" />
+      </dailyData>
     </factor>
     <factor id="categoricalFeature:prox_referenceList">
       <dailyData date="22-5-2018">
@@ -459,6 +507,11 @@
         <observation name="applicableByKind" value="2.0" />
         <observation name="unknown" value="352.0" />
       </dailyData>
+      <dailyData date="24-5-2018">
+        <observation name="UNDEFINED" value="54.0" />
+        <observation name="applicableByKind" value="2.0" />
+        <observation name="unknown" value="271.0" />
+      </dailyData>
     </factor>
     <factor id="categoricalFeature:recursion">
       <dailyData date="22-5-2018">
@@ -469,6 +522,10 @@
         <observation name="UNDEFINED" value="109.0" />
         <observation name="normal" value="296.0" />
       </dailyData>
+      <dailyData date="24-5-2018">
+        <observation name="UNDEFINED" value="84.0" />
+        <observation name="normal" value="243.0" />
+      </dailyData>
     </factor>
     <factor id="completionFinishedType">
       <dailyData date="22-5-2018">
@@ -477,9 +534,14 @@
         <observation name="typedSelect" value="8.0" />
       </dailyData>
       <dailyData date="23-5-2018">
-        <observation name="cancelled" value="1020.0" />
+        <observation name="cancelled" value="1042.0" />
         <observation name="explicitSelect" value="312.0" />
         <observation name="typedSelect" value="93.0" />
+      </dailyData>
+      <dailyData date="24-5-2018">
+        <observation name="cancelled" value="1262.0" />
+        <observation name="explicitSelect" value="253.0" />
+        <observation name="typedSelect" value="74.0" />
       </dailyData>
     </factor>
     <factor id="completionType">
@@ -489,13 +551,19 @@
       <dailyData date="23-5-2018">
         <observation name="BASIC" value="544.0" />
       </dailyData>
+      <dailyData date="24-5-2018">
+        <observation name="BASIC" value="406.0" />
+      </dailyData>
     </factor>
     <factor id="completionUsage">
       <dailyData date="22-5-2018">
         <observation name="count" value="219.0" />
       </dailyData>
       <dailyData date="23-5-2018">
-        <observation name="count" value="1425.0" />
+        <observation name="count" value="1447.0" />
+      </dailyData>
+      <dailyData date="24-5-2018">
+        <observation name="count" value="1589.0" />
       </dailyData>
     </factor>
     <factor id="doubleFeature:explicitProximity">
@@ -513,6 +581,13 @@
         <observation name="min" value="0.0" />
         <observation name="variance" value="0.13941" />
       </dailyData>
+      <dailyData date="24-5-2018">
+        <observation name="average" value="0.18683" />
+        <observation name="count" value="653.0" />
+        <observation name="max" value="1.0" />
+        <observation name="min" value="0.0" />
+        <observation name="variance" value="0.138772" />
+      </dailyData>
     </factor>
     <factor id="doubleFeature:grouping">
       <dailyData date="22-5-2018">
@@ -529,6 +604,13 @@
         <observation name="min" value="0.0" />
         <observation name="variance" value="0.0" />
       </dailyData>
+      <dailyData date="24-5-2018">
+        <observation name="average" value="0.0" />
+        <observation name="count" value="653.0" />
+        <observation name="max" value="0.0" />
+        <observation name="min" value="0.0" />
+        <observation name="variance" value="0.0" />
+      </dailyData>
     </factor>
     <factor id="doubleFeature:mostUsed">
       <dailyData date="22-5-2018">
@@ -536,6 +618,9 @@
       </dailyData>
       <dailyData date="23-5-2018">
         <observation name="UNDEFINED" value="405.0" />
+      </dailyData>
+      <dailyData date="24-5-2018">
+        <observation name="UNDEFINED" value="327.0" />
       </dailyData>
     </factor>
     <factor id="doubleFeature:nameEnd">
@@ -555,6 +640,14 @@
         <observation name="min" value="-1.0" />
         <observation name="variance" value="0.035312" />
       </dailyData>
+      <dailyData date="24-5-2018">
+        <observation name="UNDEFINED" value="55.0" />
+        <observation name="average" value="-0.069982" />
+        <observation name="count" value="543.0" />
+        <observation name="max" value="0.0" />
+        <observation name="min" value="-1.0" />
+        <observation name="variance" value="0.046536" />
+      </dailyData>
     </factor>
     <factor id="doubleFeature:position">
       <dailyData date="22-5-2018">
@@ -570,6 +663,13 @@
         <observation name="max" value="16.0" />
         <observation name="min" value="0.0" />
         <observation name="variance" value="3.192031" />
+      </dailyData>
+      <dailyData date="24-5-2018">
+        <observation name="average" value="0.290965" />
+        <observation name="count" value="653.0" />
+        <observation name="max" value="7.0" />
+        <observation name="min" value="0.0" />
+        <observation name="variance" value="0.822091" />
       </dailyData>
     </factor>
     <factor id="doubleFeature:prefix">
@@ -587,6 +687,13 @@
         <observation name="min" value="-1203.0" />
         <observation name="variance" value="73599.579407" />
       </dailyData>
+      <dailyData date="24-5-2018">
+        <observation name="average" value="-1052.675345" />
+        <observation name="count" value="653.0" />
+        <observation name="max" value="0.0" />
+        <observation name="min" value="-1403.0" />
+        <observation name="variance" value="86790.359912" />
+      </dailyData>
     </factor>
     <factor id="doubleFeature:priority">
       <dailyData date="22-5-2018">
@@ -602,6 +709,13 @@
         <observation name="max" value="0.0" />
         <observation name="min" value="-1.0" />
         <observation name="variance" value="0.008991" />
+      </dailyData>
+      <dailyData date="24-5-2018">
+        <observation name="average" value="3.059724" />
+        <observation name="count" value="653.0" />
+        <observation name="max" value="999.0" />
+        <observation name="min" value="-1.0" />
+        <observation name="variance" value="2382.250144" />
       </dailyData>
     </factor>
     <factor id="doubleFeature:prox_explicitlyImported">
@@ -621,6 +735,14 @@
         <observation name="min" value="0.0" />
         <observation name="variance" value="14973.680082" />
       </dailyData>
+      <dailyData date="24-5-2018">
+        <observation name="UNDEFINED" value="54.0" />
+        <observation name="average" value="115.779817" />
+        <observation name="count" value="545.0" />
+        <observation name="max" value="300.0" />
+        <observation name="min" value="0.0" />
+        <observation name="variance" value="15238.281034" />
+      </dailyData>
     </factor>
     <factor id="doubleFeature:prox_knownElement">
       <dailyData date="22-5-2018">
@@ -638,6 +760,14 @@
         <observation name="max" value="8.0" />
         <observation name="min" value="-1.0" />
         <observation name="variance" value="3.525327" />
+      </dailyData>
+      <dailyData date="24-5-2018">
+        <observation name="UNDEFINED" value="54.0" />
+        <observation name="average" value="0.546789" />
+        <observation name="count" value="545.0" />
+        <observation name="max" value="8.0" />
+        <observation name="min" value="0.0" />
+        <observation name="variance" value="2.815243" />
       </dailyData>
     </factor>
     <factor id="doubleFeature:prox_sameModule">
@@ -657,6 +787,14 @@
         <observation name="min" value="0.0" />
         <observation name="variance" value="0.873061" />
       </dailyData>
+      <dailyData date="24-5-2018">
+        <observation name="UNDEFINED" value="54.0" />
+        <observation name="average" value="1.350459" />
+        <observation name="count" value="545.0" />
+        <observation name="max" value="2.0" />
+        <observation name="min" value="0.0" />
+        <observation name="variance" value="0.797895" />
+      </dailyData>
     </factor>
     <factor id="doubleFeature:prox_samePsiMember">
       <dailyData date="22-5-2018">
@@ -675,6 +813,14 @@
         <observation name="min" value="0.0" />
         <observation name="variance" value="0.643643" />
       </dailyData>
+      <dailyData date="24-5-2018">
+        <observation name="UNDEFINED" value="54.0" />
+        <observation name="average" value="0.546789" />
+        <observation name="count" value="545.0" />
+        <observation name="max" value="2.0" />
+        <observation name="min" value="0.0" />
+        <observation name="variance" value="0.654669" />
+      </dailyData>
     </factor>
     <factor id="doubleFeature:query_length">
       <dailyData date="22-5-2018">
@@ -687,6 +833,13 @@
       <dailyData date="23-5-2018">
         <observation name="average" value="0.0" />
         <observation name="count" value="809.0" />
+        <observation name="max" value="0.0" />
+        <observation name="min" value="0.0" />
+        <observation name="variance" value="0.0" />
+      </dailyData>
+      <dailyData date="24-5-2018">
+        <observation name="average" value="0.0" />
+        <observation name="count" value="653.0" />
         <observation name="max" value="0.0" />
         <observation name="min" value="0.0" />
         <observation name="variance" value="0.0" />
@@ -707,6 +860,13 @@
         <observation name="min" value="1.0" />
         <observation name="variance" value="22.079005" />
       </dailyData>
+      <dailyData date="24-5-2018">
+        <observation name="average" value="8.960184" />
+        <observation name="count" value="653.0" />
+        <observation name="max" value="23.0" />
+        <observation name="min" value="1.0" />
+        <observation name="variance" value="20.889295" />
+      </dailyData>
     </factor>
     <factor id="doubleFeature:sameWords">
       <dailyData date="22-5-2018">
@@ -724,6 +884,14 @@
         <observation name="max" value="0.0" />
         <observation name="min" value="-1.0" />
         <observation name="variance" value="0.024573" />
+      </dailyData>
+      <dailyData date="24-5-2018">
+        <observation name="UNDEFINED" value="55.0" />
+        <observation name="average" value="-0.069982" />
+        <observation name="count" value="543.0" />
+        <observation name="max" value="0.0" />
+        <observation name="min" value="-1.0" />
+        <observation name="variance" value="0.046336" />
       </dailyData>
     </factor>
     <factor id="doubleFeature:shorter">
@@ -743,6 +911,14 @@
         <observation name="min" value="-999.0" />
         <observation name="variance" value="35201.268495" />
       </dailyData>
+      <dailyData date="24-5-2018">
+        <observation name="UNDEFINED" value="55.0" />
+        <observation name="average" value="-69.86372" />
+        <observation name="count" value="543.0" />
+        <observation name="max" value="0.0" />
+        <observation name="min" value="-999.0" />
+        <observation name="variance" value="46379.610897" />
+      </dailyData>
     </factor>
     <factor id="doubleFeature:simple">
       <dailyData date="22-5-2018">
@@ -761,6 +937,14 @@
         <observation name="min" value="0.0" />
         <observation name="variance" value="0.0" />
       </dailyData>
+      <dailyData date="24-5-2018">
+        <observation name="UNDEFINED" value="55.0" />
+        <observation name="average" value="0.0" />
+        <observation name="count" value="543.0" />
+        <observation name="max" value="0.0" />
+        <observation name="min" value="0.0" />
+        <observation name="variance" value="0.0" />
+      </dailyData>
     </factor>
     <factor id="doubleFeature:sorter">
       <dailyData date="22-5-2018">
@@ -773,6 +957,13 @@
       <dailyData date="23-5-2018">
         <observation name="average" value="1.0" />
         <observation name="count" value="809.0" />
+        <observation name="max" value="1.0" />
+        <observation name="min" value="1.0" />
+        <observation name="variance" value="0.0" />
+      </dailyData>
+      <dailyData date="24-5-2018">
+        <observation name="average" value="1.0" />
+        <observation name="count" value="653.0" />
         <observation name="max" value="1.0" />
         <observation name="min" value="1.0" />
         <observation name="variance" value="0.0" />
@@ -795,6 +986,14 @@
         <observation name="min" value="-5.0" />
         <observation name="variance" value="0.578121" />
       </dailyData>
+      <dailyData date="24-5-2018">
+        <observation name="UNDEFINED" value="255.0" />
+        <observation name="average" value="-3.783217" />
+        <observation name="count" value="143.0" />
+        <observation name="max" value="-3.0" />
+        <observation name="min" value="-5.0" />
+        <observation name="variance" value="0.773534" />
+      </dailyData>
     </factor>
     <factor id="doubleFeature:stats">
       <dailyData date="22-5-2018">
@@ -810,6 +1009,13 @@
         <observation name="max" value="10000.0" />
         <observation name="min" value="0.0" />
         <observation name="variance" value="20401054.159315" />
+      </dailyData>
+      <dailyData date="24-5-2018">
+        <observation name="average" value="4681.298622" />
+        <observation name="count" value="653.0" />
+        <observation name="max" value="10000.0" />
+        <observation name="min" value="0.0" />
+        <observation name="variance" value="22942577.445251" />
       </dailyData>
     </factor>
     <factor id="itemPosition">
@@ -827,6 +1033,16 @@
         <observation name="6" value="1.0" />
         <observation name="8" value="1.0" />
       </dailyData>
+      <dailyData date="24-5-2018">
+        <observation name="0" value="208.0" />
+        <observation name="1" value="22.0" />
+        <observation name="2" value="12.0" />
+        <observation name="3" value="3.0" />
+        <observation name="4" value="3.0" />
+        <observation name="5" value="3.0" />
+        <observation name="6" value="1.0" />
+        <observation name="7" value="1.0" />
+      </dailyData>
     </factor>
     <factor id="mnemonicsUsage">
       <dailyData date="22-5-2018">
@@ -836,6 +1052,10 @@
       <dailyData date="23-5-2018">
         <observation name="total" value="274.0" />
         <observation name="withMnemonics" value="5.0" />
+      </dailyData>
+      <dailyData date="24-5-2018">
+        <observation name="total" value="221.0" />
+        <observation name="withMnemonics" value="3.0" />
       </dailyData>
     </factor>
     <factor id="prefixLength">
@@ -860,6 +1080,20 @@
         <observation name="7" value="6.0" />
         <observation name="8" value="2.0" />
       </dailyData>
+      <dailyData date="24-5-2018">
+        <observation name="0" value="22.0" />
+        <observation name="1" value="10.0" />
+        <observation name="13" value="1.0" />
+        <observation name="14" value="1.0" />
+        <observation name="2" value="63.0" />
+        <observation name="3" value="62.0" />
+        <observation name="4" value="62.0" />
+        <observation name="5" value="14.0" />
+        <observation name="6" value="8.0" />
+        <observation name="7" value="4.0" />
+        <observation name="8" value="5.0" />
+        <observation name="9" value="1.0" />
+      </dailyData>
     </factor>
     <factor id="timeBetweenTyping">
       <dailyData date="22-5-2018">
@@ -870,6 +1104,10 @@
         <observation name="average" value="349.471787" />
         <observation name="count" value="638.0" />
       </dailyData>
+      <dailyData date="24-5-2018">
+        <observation name="average" value="312.062185" />
+        <observation name="count" value="595.0" />
+      </dailyData>
     </factor>
   </component>
   <component name="ProjectView">
@@ -877,9 +1115,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AndroidView" />
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -920,7 +1155,7 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="task_1" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
+              <item name="bean" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="task_1" type="b2602c69:ProjectViewProjectNode" />
@@ -929,7 +1164,7 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="task_1" type="462c0819:PsiDirectoryNode" />
-              <item name="exception" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="task_1" type="b2602c69:ProjectViewProjectNode" />
@@ -956,7 +1191,16 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="task_1" type="462c0819:PsiDirectoryNode" />
-              <item name="transaction" type="462c0819:PsiDirectoryNode" />
+              <item name="utils" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="task_1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="task_1" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="task_1" type="462c0819:PsiDirectoryNode" />
+              <item name="validator" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="task_1" type="b2602c69:ProjectViewProjectNode" />
@@ -969,22 +1213,25 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
+      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/main/webapp" />
-      <recent name="$PROJECT_DIR$/src/main/webapp/WEB-INF/lib" />
-      <recent name="$PROJECT_DIR$/src/main/resources" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/webapp" />
       <recent name="$PROJECT_DIR$/target/tomcat/webapps" />
       <recent name="$PROJECT_DIR$/src/main/webapp/WEB-INF/lib" />
       <recent name="$PROJECT_DIR$/src/main" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/webapp" />
+      <recent name="$PROJECT_DIR$/src/main/webapp/WEB-INF/lib" />
+      <recent name="$PROJECT_DIR$/src/main/resources" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -1022,7 +1269,7 @@
       <option name="ACTIVITY_CLASS" value="" />
       <method v="2">
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1527099130757" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1527180377168" />
       </method>
     </configuration>
     <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Instrumented Tests">
@@ -1046,7 +1293,7 @@
       </Profilers>
       <method v="2">
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1527099130758" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1527180377169" />
       </method>
     </configuration>
     <configuration name="ConnectionPool" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -1117,13 +1364,21 @@
       <option name="project" value="LOCAL" />
       <updated>1527008232156</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Almost finished">
+      <created>1527099158223</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1527099158223</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="67" y="25" width="1613" height="1025" extended-state="6" />
+    <frame x="67" y="25" width="1613" height="1025" extended-state="7" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19846842" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21250798" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -1133,8 +1388,8 @@
       <window_info id="Favorites" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32960895" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.46256983" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.5027933" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.27709496" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.3441341" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -1149,7 +1404,7 @@
       <window_info anchor="right" id="Capture Analysis" order="4" />
       <window_info anchor="right" id="Theme Preview" order="5" />
       <window_info anchor="right" id="Palette&#9;" order="6" />
-      <window_info anchor="right" id="Maven Projects" order="7" visible="true" weight="0.1314614" />
+      <window_info anchor="right" id="Maven Projects" order="7" weight="0.14422463" />
     </layout>
   </component>
   <component name="UnknownFeatures">
@@ -1162,19 +1417,20 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Add departments almost implemented" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add departments almost implemented" />
+    <MESSAGE value="Almost finished" />
+    <option name="LAST_COMMIT_MESSAGE" value="Almost finished" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/aimprosoft/task_1/controller/DepartmentServlet.java</url>
-          <line>45</line>
+          <line>85</line>
           <properties />
-          <option name="timeStamp" value="19" />
+          <option name="timeStamp" value="32" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="20" />
+      <option name="time" value="33" />
     </breakpoint-manager>
   </component>
   <component name="antWorkspaceConfiguration">
@@ -1182,40 +1438,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/target/tomcat/conf/web.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-9201" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/target/tomcat/conf/logging.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="99">
-          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/target/task1/META-INF/context.xml" />
-    <entry file="file://$PROJECT_DIR$/target/tomcat/webapps/task_1/META-INF/context.xml" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/aimprosoft/task_1/dao/EmployeeDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="19" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="19" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/aimprosoft/task_1/dao/parser/impl/EmployeeParser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="197">
-          <caret line="28" column="5" selection-start-line="28" selection-start-column="5" selection-end-line="28" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/META-INF/context.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -1230,9 +1452,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/check_all.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/check_all.js" />
     <entry file="jar://$MAVEN_REPOSITORY$/javax/servlet/javax.servlet-api/4.0.1/javax.servlet-api-4.0.1.jar!/javax/servlet/http/HttpServletRequestWrapper.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
@@ -1261,75 +1481,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/aimprosoft/task_1/bean/Employee.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="284">
-          <caret line="53" column="5" selection-start-line="53" selection-start-column="5" selection-end-line="53" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/aimprosoft/task_1/service/EmployeeService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="17" column="5" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/css/add_style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="155">
-          <caret line="59" column="1" selection-start-line="59" selection-start-column="1" selection-end-line="59" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/css/view_style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="13" selection-start-line="13" selection-end-line="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/css/bootstrap.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="1" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/aimprosoft/task_1/dao/impl/EmployeeDaoImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="3" column="26" selection-start-line="3" selection-start-column="26" selection-end-line="3" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1731">
-          <caret line="237" column="1" selection-start-line="237" selection-start-column="1" selection-end-line="237" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/aimprosoft/task_1/controller/utils/ServletAttributes.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/aimprosoft/task_1/exception/utils/Message.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="12" selection-start-line="4" selection-start-column="12" selection-end-line="4" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/aimprosoft/task_1/controller/utils/ServletAttributes.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/aimprosoft/task_1/exception/utils/Message.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/aimprosoft/task_1/exception/TransactionInterruptedException.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
@@ -1337,34 +1490,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/aimprosoft/task_1/transaction/ConnectionPool.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-711">
-          <caret line="13" column="24" selection-start-line="13" selection-start-column="24" selection-end-line="13" selection-end-column="24" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/aimprosoft/task_1/transaction/ConnectionPool.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/aimprosoft/task_1/transaction/Operation.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
           <caret line="6" column="57" selection-start-line="6" selection-start-column="57" selection-end-line="6" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/aimprosoft/task_1/validator/EmployeeValidator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="30" selection-start-line="2" selection-start-column="30" selection-end-line="2" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/aimprosoft/task_1/dao/parser/ResultSetParser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="10" column="6" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="6" />
         </state>
       </provider>
     </entry>
@@ -1387,64 +1517,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/aimprosoft/task_1/listeners/AppContextListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="74" column="96" selection-start-line="74" selection-start-column="96" selection-end-line="74" selection-end-column="96" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="50" selection-start-line="13" selection-start-column="50" selection-end-line="13" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/aimprosoft/task_1/dao/AbstractEntity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
-          <folding>
-            <element signature="e#176#177#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/aimprosoft/task_1/dao/GenericDao.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
           <caret line="9" column="9" selection-start-line="9" selection-start-column="9" selection-end-line="9" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/aimprosoft/task_1/dao/DepartmentDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="6" selection-start-line="12" selection-start-column="6" selection-end-line="12" selection-end-column="6" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/aimprosoft/task_1/dao/utils/QueryStorage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="78" lean-forward="true" selection-start-line="12" selection-start-column="78" selection-end-line="12" selection-end-column="78" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/aimprosoft/task_1/dao/impl/DepartmentDaoImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="89">
-          <caret line="53" column="41" lean-forward="true" selection-start-line="53" selection-start-column="41" selection-end-line="53" selection-end-column="41" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1454,28 +1530,6 @@
           <caret line="39" column="16" selection-start-line="39" selection-start-column="16" selection-end-line="39" selection-end-column="16" />
           <folding>
             <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/aimprosoft/task_1/validator/DepartmentValidator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" selection-start-line="14" selection-end-line="14" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/aimprosoft/task_1/controller/utils/Validator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" selection-start-line="13" selection-end-line="13" />
-          <folding>
-            <element signature="e#402#403#0" expanded="true" />
-            <element signature="e#458#459#0" expanded="true" />
-            <element signature="e#507#508#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1491,10 +1545,94 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/aimprosoft/task_1/dao/parser/ResultSetParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="10" column="6" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/aimprosoft/task_1/controller/ShowDepartmentServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="29" column="36" selection-start-line="29" selection-start-column="36" selection-end-line="29" selection-end-column="36" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/aimprosoft/task_1/listeners/AppContextListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="372">
+          <caret line="68" column="8" selection-start-line="68" selection-start-column="8" selection-end-line="68" selection-end-column="8" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/aimprosoft/task_1/dao/EmployeeDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="12" selection-start-line="14" selection-start-column="12" selection-end-line="14" selection-end-column="12" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/aimprosoft/task_1/dao/DepartmentDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="15" selection-start-line="12" selection-start-column="15" selection-end-line="12" selection-end-column="15" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/aimprosoft/task_1/dao/impl/EmployeeDaoImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="22" column="49" selection-start-line="22" selection-start-column="49" selection-end-line="22" selection-end-column="49" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/aimprosoft/task_1/dao/utils/QueryStorage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/aimprosoft/task_1/dao/impl/DepartmentDaoImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="116">
+          <caret line="53" column="56" selection-start-line="53" selection-start-column="56" selection-end-line="53" selection-end-column="56" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/aimprosoft/task_1/validator/DepartmentValidator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="5" selection-start-line="11" selection-start-column="3" selection-end-line="22" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/aimprosoft/task_1/service/DepartmentService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="284">
-          <caret line="51" selection-start-line="51" selection-end-line="51" />
+        <state relative-caret-position="274">
+          <caret line="33" column="32" selection-start-line="33" selection-start-column="32" selection-end-line="33" selection-end-column="32" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1503,77 +1641,190 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/aimprosoft/task_1/transaction/TransactionManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="32" selection-start-line="32" selection-end-line="32" />
+        <state relative-caret-position="615">
+          <caret line="49" selection-start-line="49" selection-end-line="49" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/main.js">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/jquery.min.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="41" selection-start-line="15" selection-start-column="16" selection-end-line="15" selection-end-column="41" />
+        <state relative-caret-position="60">
+          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/editDepartment.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/aimprosoft/task_1/bean/Employee.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="92" selection-start-line="17" selection-start-column="92" selection-end-line="17" selection-end-column="92" />
+        <state relative-caret-position="66">
+          <caret line="20" column="40" selection-start-line="20" selection-start-column="28" selection-end-line="20" selection-end-column="40" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/aimprosoft/task_1/dao/AbstractEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
+          <folding>
+            <element signature="e#176#177#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/aimprosoft/task_1/service/EmployeeService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="464">
+          <caret line="76" selection-start-line="76" selection-end-line="76" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/aimprosoft/task_1/validator/EmployeeValidator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="104">
+          <caret line="13" column="31" selection-start-line="13" selection-start-column="31" selection-end-line="13" selection-end-column="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/aimprosoft/task_1/controller/utils/Validator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="41" selection-start-line="6" selection-start-column="41" selection-end-line="6" selection-end-column="41" />
+          <folding>
+            <element signature="e#661#662#0" expanded="true" />
+            <element signature="e#708#709#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="20" selection-start-line="18" selection-start-column="20" selection-end-line="18" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3555">
+          <caret line="237" column="1" selection-start-line="237" selection-start-column="1" selection-end-line="237" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/error.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="7" selection-start-line="16" selection-start-column="7" selection-end-line="16" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/error_404.jsp">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/css/bootstrap.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="1" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/css/add_style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/css/view_style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-516">
+          <caret line="13" selection-start-line="13" selection-end-line="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/addEmployee.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="205">
-          <caret line="14" column="40" lean-forward="true" selection-start-line="14" selection-start-column="40" selection-end-line="14" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/addDepartment.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="14" selection-start-line="17" selection-start-column="14" selection-end-line="17" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/aimprosoft/task_1/utils/Constant.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="62" selection-start-line="11" selection-start-column="62" selection-end-line="11" selection-end-column="62" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/aimprosoft/task_1/controller/DepartmentServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="37" column="9" selection-start-line="31" selection-start-column="8" selection-end-line="37" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/index.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="39" column="20" selection-start-line="39" selection-start-column="20" selection-end-line="39" selection-end-column="20" />
+        <state relative-caret-position="69">
+          <caret line="29" column="60" selection-start-line="29" selection-start-column="60" selection-end-line="29" selection-end-column="60" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/employee.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1650">
-          <caret line="110" column="62" selection-start-line="110" selection-start-column="62" selection-end-line="110" selection-end-column="62" />
+        <state relative-caret-position="339">
+          <caret line="70" column="47" selection-start-line="70" selection-start-column="47" selection-end-line="70" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/editDepartment.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="44" selection-start-line="5" selection-start-column="44" selection-end-line="5" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/index.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="25" column="37" selection-start-line="25" selection-start-column="37" selection-end-line="25" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="73" column="13" selection-start-line="73" selection-start-column="13" selection-end-line="73" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/aimprosoft/task_1/utils/Constant.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="309">
+          <caret line="37" column="33" selection-start-line="37" selection-start-column="33" selection-end-line="37" selection-end-column="33" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/aimprosoft/task_1/controller/EmployeeServlet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="28" column="56" selection-start-line="28" selection-start-column="56" selection-end-line="28" selection-end-column="56" />
+        <state relative-caret-position="-31">
+          <caret line="37" selection-start-line="37" selection-end-line="37" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/aimprosoft/task_1/controller/ShowDepartmentPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="23" selection-start-line="23" selection-end-line="23" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/aimprosoft/task_1/controller/DepartmentServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-42">
+          <caret line="54" column="57" selection-start-line="54" selection-start-column="57" selection-end-line="54" selection-end-column="57" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/addDepartment.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-9">
+          <caret line="20" selection-start-line="20" selection-end-line="20" />
         </state>
       </provider>
     </entry>

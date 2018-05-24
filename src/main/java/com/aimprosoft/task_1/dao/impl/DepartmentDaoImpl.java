@@ -50,7 +50,7 @@ public class DepartmentDaoImpl extends AbstractDao<Department, Integer> implemen
         return preparedStatement;
     }
 
-    private PreparedStatement prepareReadByEmailQuery(Connection connection) throws SQLException {
+    private PreparedStatement prepareReadByNameQuery(Connection connection) throws SQLException {
         String query = QueryStorage.Department.READ_BY_NAME;
         return connection.prepareStatement(query);
     }
@@ -67,9 +67,9 @@ public class DepartmentDaoImpl extends AbstractDao<Department, Integer> implemen
     }
 
     @Override
-    public Department readByName(Connection connection, Department department) throws SQLException {
-        PreparedStatement preparedStatement = prepareReadByEmailQuery(connection);
-        preparedStatement.setString(1, department.getName());
+    public Department readByName(Connection connection, String name) throws SQLException {
+        PreparedStatement preparedStatement = prepareReadByNameQuery(connection);
+        preparedStatement.setString(1, name);
         return resultSetParser.getObject(preparedStatement.executeQuery());
     }
 

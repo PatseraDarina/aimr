@@ -1,7 +1,5 @@
 @charset "utf-8";
-/* CSS Document */
 
-/* ---------- GENERAL ---------- */
 
 body {
     background: url(/img/bg.png) repeat;
@@ -42,7 +40,6 @@ input[type="submit"] { cursor: pointer; }
 }
 .clearfix:after { clear: both; }
 
-/* ---------- add-form ---------- */
 
 #add-form {
     margin: 150px auto;
@@ -155,7 +152,6 @@ input[type="submit"] { cursor: pointer; }
     width: 20px;
 }
 
-/* Стили бара vladmaxi, можно удалить */
 .vladmaxi-top{
     line-height: 24px;
     font-size: 11px;

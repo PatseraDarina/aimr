@@ -10,6 +10,8 @@ public final class Constant {
         public static final String ADD_DEPARTMENTS = "/addDepartment.jsp";
         public static final String INDEX = "/index.jsp";
         public static final String EMPLOYEE = "/employee.jsp";
+        public static final String ADD_EMPLOYEE = "/addEmployee.jsp";
+        public static final String ERROR_PAGE = "/error.jsp";
     }
 
     public static class Attribute {
@@ -23,11 +25,22 @@ public final class Constant {
         public static final String DEPARTMENT_VALIDATOR = "departmentValidator";
         public static final String DEPARTMENT = "department";
         public static final String DEPARTMENT_ID = "departmentId";
+        public static final String EMPLOYEE_EMAIL = "employeeEmail";
+        public static final String EMPLOYEE_NAME = "employeeName";
+        public static final String EMPLOYEE_VALIDATOR = "employeeValidator";
+        public static final String EMPLOYEE_DATE = "employeeDate";
+        public static final String EMPLOYEE = "employee";
+        public static final String EMPLOYEE_ID = "employeeId";
+        public static final String ERROR_MESSAGE = "errorMessage";
+        public static final String IS_ADD = "isAdd";
     }
 
     public static class Message {
         public static final String ADD_SUCCESS = "Record was added successfully";
         public static final String INVALID_NAME = "Invalid name";
+        public static final String INVALID_EMAIL = "Invalid email";
+        public static final String INVALID_DATE = "Invalid date";
+        public static final Object UPDATE_SUCCESS = "Record was updated successfully";
     }
 
     public static class Exception {

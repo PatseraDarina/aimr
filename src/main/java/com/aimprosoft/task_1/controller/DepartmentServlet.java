@@ -29,12 +29,15 @@ public class DepartmentServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        HttpSession session = req.getSession(true);
         try {
             List<Department> departmentList = departmentService.getAll();
-            req.setAttribute(Constant.Attribute.DEPARTMENTS, departmentList);
+            session.setAttribute(Constant.Attribute.DEPARTMENTS, departmentList);
+            session.setAttribute(Constant.Attribute.DEPARTMENT_NAME, departmentList.get(0).getName());
             req.getRequestDispatcher(Constant.JSP.INDEX).forward(req, resp);
         } catch (TransactionInterruptedException e) {
-            e.printStackTrace();
+            session.setAttribute(Constant.Attribute.ERROR_MESSAGE, e.getMessage());
+            resp.sendRedirect(Constant.JSP.ERROR_PAGE);
         }
     }
 
@@ -50,7 +53,8 @@ public class DepartmentServlet extends HttpServlet {
                 session.setAttribute(Constant.Attribute.INFO, Constant.Message.ADD_SUCCESS);
                 resp.sendRedirect(Constant.JSP.ADD_DEPARTMENTS);
             } catch (TransactionInterruptedException e) {
-                e.printStackTrace();
+                session.setAttribute(Constant.Attribute.ERROR_MESSAGE, e.getMessage());
+                resp.sendRedirect(Constant.JSP.ERROR_PAGE);
             } catch (DataUniquenessException e) {
                 session.setAttribute(Constant.Attribute.INFO, e.getMessage());
                 session.setAttribute(Constant.Attribute.DEPARTMENT, department);
@@ -65,18 +69,20 @@ public class DepartmentServlet extends HttpServlet {
     }
 
     @Override
-    protected void doDelete(HttpServletRequest req, HttpServletResponse resp) {
+    protected void doDelete(HttpServletRequest req, HttpServletResponse resp) throws IOException {
+        HttpSession session = req.getSession();
         Department department = new Department();
         department.setId(Integer.valueOf(req.getParameter(Constant.Attribute.DEPARTMENT_ID)));
         try {
             departmentService.delete(department.getId());
         } catch (TransactionInterruptedException e) {
-            e.printStackTrace();
+            session.setAttribute(Constant.Attribute.ERROR_MESSAGE, e.getMessage());
+            resp.sendRedirect(Constant.JSP.ERROR_PAGE);
         }
     }
 
     @Override
-    protected void doPut(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    protected void doPut(HttpServletRequest req, HttpServletResponse resp) throws IOException {
         HttpSession session = req.getSession();
         Department department = new Department();
         department.setId(Integer.valueOf(req.getParameter(Constant.Attribute.DEPARTMENT_ID)));
@@ -85,12 +91,13 @@ public class DepartmentServlet extends HttpServlet {
         if (errors.isEmpty()) {
             try {
                 departmentService.update(department);
+                session.setAttribute(Constant.Attribute.INFO, Constant.Message.UPDATE_SUCCESS);
             } catch (TransactionInterruptedException e) {
-                e.printStackTrace();
+                session.setAttribute(Constant.Attribute.ERROR_MESSAGE, e.getMessage());
+                resp.sendRedirect(Constant.JSP.ERROR_PAGE);
             } catch (DataUniquenessException e) {
                 session.setAttribute(Constant.Attribute.INFO, e.getMessage());
                 session.setAttribute(Constant.Attribute.DEPARTMENT, department);
-               // req.getRequestDispatcher(Constant.JSP.ADD_DEPARTMENTS).include(req, resp);
             }
         } else {
             session.setAttribute(Constant.Attribute.ERRORS, errors);

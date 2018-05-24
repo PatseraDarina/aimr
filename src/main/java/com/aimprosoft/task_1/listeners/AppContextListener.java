@@ -14,6 +14,7 @@ import com.aimprosoft.task_1.service.EmployeeService;
 import com.aimprosoft.task_1.transaction.TransactionManager;
 import com.aimprosoft.task_1.utils.Constant;
 import com.aimprosoft.task_1.validator.DepartmentValidator;
+import com.aimprosoft.task_1.validator.EmployeeValidator;
 
 import javax.naming.Context;
 import javax.naming.InitialContext;
@@ -63,6 +64,9 @@ public class AppContextListener implements ServletContextListener {
         EmployeeDao employeeDao = new EmployeeDaoImpl(resultSetParser);
         EmployeeService employeeService = new EmployeeService(transactionManager, employeeDao);
         servletContext.setAttribute(Constant.Attribute.EMPLOYEE_SERVICE, employeeService);
+
+        EmployeeValidator validator = new EmployeeValidator();
+        servletContext.setAttribute(Constant.Attribute.EMPLOYEE_VALIDATOR, validator);
     }
 
     private void initDepartmentService() {

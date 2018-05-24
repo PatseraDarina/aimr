@@ -10,5 +10,5 @@ public interface DepartmentDao extends GenericDao<Department, Integer> {
 
     List<Department> readAll(Connection connection) throws SQLException;
 
-    Department readByName(Connection connection, Department department) throws SQLException;
+    Department readByName(Connection connection, String name) throws SQLException;
 }
