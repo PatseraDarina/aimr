@@ -7,6 +7,7 @@ import java.sql.Date;
 public class Employee extends AbstractEntity<Integer> {
 
     private String name;
+    private Integer salary;
     private String email;
     private Date date;
     private Integer idDepartment;
@@ -14,8 +15,9 @@ public class Employee extends AbstractEntity<Integer> {
     public Employee() {
     }
 
-    public Employee(String name, String email, Date date, Integer idDepartment) {
+    public Employee(String name, Integer salary, String email, Date date, Integer idDepartment) {
         this.name = name;
+        this.salary = salary;
         this.email = email;
         this.date = date;
         this.idDepartment = idDepartment;
@@ -53,9 +55,19 @@ public class Employee extends AbstractEntity<Integer> {
         this.idDepartment = idDepartment;
     }
 
+    public Integer getSalary() {
+        return salary;
+    }
+
+    public void setSalary(Integer salary) {
+        this.salary = salary;
+    }
+
+    @Override
     public String toString() {
         return "Employee{" +
                 "name='" + name + '\'' +
+                ", salary=" + salary +
                 ", email='" + email + '\'' +
                 ", date=" + date +
                 ", idDepartment=" + idDepartment +

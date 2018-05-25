@@ -53,7 +53,6 @@ public class DepartmentService {
         }
     }
 
-
     public Department getByName(String name) throws TransactionInterruptedException {
         return transactionManager.doTransaction(connection -> departmentDao.readByName(connection, name));
     }
@@ -64,4 +63,7 @@ public class DepartmentService {
         )));
     }
 
+    public Department getById(Integer id) throws TransactionInterruptedException {
+        return transactionManager.doTransaction(connection -> departmentDao.read(connection, id));
+    }
 }

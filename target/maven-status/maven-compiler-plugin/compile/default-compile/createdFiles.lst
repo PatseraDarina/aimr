@@ -17,6 +17,7 @@ com/aimprosoft/task_1/dao/utils/QueryStorage.class
 com/aimprosoft/task_1/utils/Constant$Exception.class
 com/aimprosoft/task_1/utils/Constant$Message.class
 com/aimprosoft/task_1/controller/DepartmentServlet.class
+com/aimprosoft/task_1/controller/ShowEmployeePage.class
 com/aimprosoft/task_1/exception/DataUniquenessException.class
 com/aimprosoft/task_1/bean/Department.class
 com/aimprosoft/task_1/dao/impl/DepartmentDaoImpl.class

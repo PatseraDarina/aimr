@@ -33,6 +33,9 @@ public final class Constant {
         public static final String EMPLOYEE_ID = "employeeId";
         public static final String ERROR_MESSAGE = "errorMessage";
         public static final String IS_ADD = "isAdd";
+        public static final String EMPLOYEE_SALARY = "employeeSalary";
+        public static final String SHOW_DEPARTMENTS = "/showDepartments";
+        public static final String SHOW_EMPLOYEE = "/showEmployee";
     }
 
     public static class Message {
@@ -41,6 +44,7 @@ public final class Constant {
         public static final String INVALID_EMAIL = "Invalid email";
         public static final String INVALID_DATE = "Invalid date";
         public static final Object UPDATE_SUCCESS = "Record was updated successfully";
+        public static final String INVALID_SALARY = "Invalid salary value";
     }
 
     public static class Exception {

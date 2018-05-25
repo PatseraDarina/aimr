@@ -17,19 +17,27 @@
     <div class="container">
         <section>
             <header class="major">
-                <h2>New employee</h2>
+                <h2>${sessionScope.isAdd ? 'New employee' : 'Edit employee'}</h2>
             </header>
 
-            <form name="employee-form" id="employee-form" action="/employee" method="post" onsubmit="return validateForm();">
+            <c:choose>
+                <c:when test="${sessionScope.isAdd}">
+                         <form name="employee-form" id="employee-form" action="employee" method="post" onsubmit="return validateForm();">
+                        </c:when>
+            <c:otherwise>
+                <form name="employee-form" id="employee-form">
+            </c:otherwise>
+            </c:choose>
                 <div class="row half">
                     <div class="12u">
-                        <p><input class="text" type="text" name="employeeName" id="employeeName" placeholder="Employee Name" pattern="^[A-Za-z ]{3,20}$" title="Ivan Ivanov" value="${sessionScope.employee.name}"/></p>
+                        <p><input class="text" type="text" name="employeeName" id="employeeName" placeholder="Employee Name" pattern="^[A-Za-z ]{3,20}$" title="Ivan Ivanov" value="${sessionScope.isAdd ? sessionScope.employee.name : param.employeeName}"/></p>
                         <span id="eNameErr"><c:out value="${sessionScope.errors['employeeName']}"/></span>
-                        <p><input class="text" type="email" name="employeeEmail" id="employeeEmail" placeholder="Employee Email" value="${sessionScope.employee.email}"/></p>
+                        <p><input class="text" type="text" name="employeeSalary" id="employeeSalary" placeholder="Employee Salary" pattern="^[0-9]{1,6}$" title="1-120000" value="${sessionScope.isAdd ? sessionScope.employee.salary : param.employeeSalary}"/></p>
+                        <span id="eNameErr"><c:out value="${sessionScope.errors['employeeName']}"/></span>
+                        <p><input class="text" type="email" name="employeeEmail" id="employeeEmail" placeholder="Employee Email" value="${sessionScope.isAdd ? sessionScope.employee.email : param.employeeEmail}"/></p>
                         <span id="eEmailErr"><c:out value="${sessionScope.errors['employeeEmail']}"/></span>
-                        <p><input class="text" type="date" name="employeeDate" id="employeeDate" placeholder="Employee Date" pattern="([12]\d{3}-(0[1-9]|1[0-2])-(0[1-9]|[12]\d|3[01]))" title="2000-10-10" value="${empty sessionScope.employee.date ? '2000-01-01' : sessionScope.employee.date}"/></p>
+                        <p><input class="text" type="date" name="employeeDate" id="employeeDate" placeholder="Employee Date" pattern="([12]\d{3}-(0[1-9]|1[0-2])-(0[1-9]|[12]\d|3[01]))" title="2000-10-10" value="${sessionScope.isAdd ? sessionScope.employee.date : param.employeeDate}"/></p>
                         <span id="eDateErr"><c:out value="${sessionScope.errors['employeeDate']}"/></span>
-                        <c:out value="${sessionScope.employee.date}"/>
                         <p><select class="form-control" name="departmentName" id="departmentName">
                            <c:forEach  var="department" items="${sessionScope.departments}">
                             <c:choose>
@@ -44,7 +52,14 @@
                        </select></p>
                     </div>
                 </div>
-                <button type="submit" form="employee-form" style = "margin-top: 2%">Add</button>
+                <c:choose>
+                    <c:when test="${sessionScope.isAdd}">
+                        <button type="submit" form="employee-form" style = "margin-top: 2%">Add</button>
+                    </c:when>
+                <c:otherwise>
+                        <button type="submit" style = "margin-top: 2%" onclick="update_employee(document.getElementById('employeeName').value, document.getElementById('employeeSalary').value, document.getElementById('employeeEmail').value, document.getElementById('employeeDate').value, document.getElementById('departmentName').value)">Edit</button>
+                </c:otherwise>
+                </c:choose>
                 <span><c:out value="${sessionScope.info}"/></span>
             </form>
             	<c:remove var="info" scope="session"/>

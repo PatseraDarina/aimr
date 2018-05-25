@@ -6,6 +6,7 @@ import com.aimprosoft.task_1.exception.TransactionInterruptedException;
 import com.aimprosoft.task_1.service.DepartmentService;
 import com.aimprosoft.task_1.utils.Constant;
 import com.aimprosoft.task_1.validator.DepartmentValidator;
+import org.apache.log4j.Logger;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -18,6 +19,7 @@ import java.util.Map;
 
 public class DepartmentServlet extends HttpServlet {
 
+    private static final Logger LOGGER = Logger.getLogger(DepartmentServlet.class);
     private DepartmentService departmentService;
     private DepartmentValidator departmentValidator;
 
@@ -38,6 +40,7 @@ public class DepartmentServlet extends HttpServlet {
         } catch (TransactionInterruptedException e) {
             session.setAttribute(Constant.Attribute.ERROR_MESSAGE, e.getMessage());
             resp.sendRedirect(Constant.JSP.ERROR_PAGE);
+            LOGGER.warn(e.getMessage(), e);
         }
     }
 
@@ -55,17 +58,19 @@ public class DepartmentServlet extends HttpServlet {
             } catch (TransactionInterruptedException e) {
                 session.setAttribute(Constant.Attribute.ERROR_MESSAGE, e.getMessage());
                 resp.sendRedirect(Constant.JSP.ERROR_PAGE);
+                LOGGER.warn(e.getMessage(), e);
             } catch (DataUniquenessException e) {
                 session.setAttribute(Constant.Attribute.INFO, e.getMessage());
                 session.setAttribute(Constant.Attribute.DEPARTMENT, department);
                 req.getRequestDispatcher(Constant.JSP.ADD_DEPARTMENTS).include(req, resp);
+                LOGGER.warn(e.getMessage(), e);
             }
         } else {
             session.setAttribute(Constant.Attribute.ERRORS, errors);
             session.setAttribute(Constant.Attribute.DEPARTMENT, department);
             req.getRequestDispatcher(Constant.JSP.ADD_DEPARTMENTS).include(req, resp);
+            errors.clear();
         }
-        errors.clear();
     }
 
     @Override
@@ -78,11 +83,12 @@ public class DepartmentServlet extends HttpServlet {
         } catch (TransactionInterruptedException e) {
             session.setAttribute(Constant.Attribute.ERROR_MESSAGE, e.getMessage());
             resp.sendRedirect(Constant.JSP.ERROR_PAGE);
+            LOGGER.warn(e.getMessage(), e);
         }
     }
 
     @Override
-    protected void doPut(HttpServletRequest req, HttpServletResponse resp) throws IOException {
+    protected void doPut(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
         HttpSession session = req.getSession();
         Department department = new Department();
         department.setId(Integer.valueOf(req.getParameter(Constant.Attribute.DEPARTMENT_ID)));
@@ -92,16 +98,20 @@ public class DepartmentServlet extends HttpServlet {
             try {
                 departmentService.update(department);
                 session.setAttribute(Constant.Attribute.INFO, Constant.Message.UPDATE_SUCCESS);
+                resp.sendRedirect(Constant.Attribute.SHOW_DEPARTMENTS);
             } catch (TransactionInterruptedException e) {
                 session.setAttribute(Constant.Attribute.ERROR_MESSAGE, e.getMessage());
                 resp.sendRedirect(Constant.JSP.ERROR_PAGE);
+                LOGGER.warn(e.getMessage(), e);
             } catch (DataUniquenessException e) {
                 session.setAttribute(Constant.Attribute.INFO, e.getMessage());
                 session.setAttribute(Constant.Attribute.DEPARTMENT, department);
+                resp.sendRedirect(Constant.Attribute.SHOW_DEPARTMENTS);
+                LOGGER.warn(e.getMessage(), e);
             }
         } else {
             session.setAttribute(Constant.Attribute.ERRORS, errors);
+            errors.clear();
         }
-        errors.clear();
     }
 }

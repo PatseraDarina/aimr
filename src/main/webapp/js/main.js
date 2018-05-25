@@ -1,6 +1,6 @@
 var rg_name = /^[A-Za-z ]{3,20}$/;
 var rg_email = /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/;
-var rg_date = /([12]\d{3}-(0[1-9]|1[0-2])-(0[1-9]|[12]\d|3[01]))/;
+var rg_date = /^\s*3[01]|[12][0-9]|0?[1-9]\1[012]|0?[1-9]\?:19|20\d{2}\s*$/;
 
 function delete_department(id, rowid) {
     $.ajax({
@@ -12,13 +12,12 @@ function delete_department(id, rowid) {
     });
 }
 
-function update_department(id, name, rowid) {
+function update_department(departmentId, name) {
     $.ajax({
-        url: "department?departmentId=" + id + "&departmentName=" + name,
+        url: "department?departmentName=" + name + "&departmentId=" + departmentId,
         type: "PUT",
-        success: function(rowid, name) {
-            $('#edit').modal('show');
-            document.getElementById("department_table").rows(rowid).cells[1]=name;
+        success: function(name) {
+            document.getElementById("info").innerHTML="Record was updated successfully";
         }
     });
 }
@@ -29,6 +28,16 @@ function update_department(id, name, rowid) {
             type: "DELETE",
             success: function(rowid) {
                 document.getElementById("employee_table").deleteRow(rowid);
+            }
+        });
+    }
+
+    function update_employee(employeeName, employeeSalary, employeeEmail, employeeDate, departmentName) {
+        $.ajax({
+            url: "employee?employeeName=" + employeeName + "&employeeSalary=" + employeeSalary + "&employeeEmail=" + employeeEmail + "&employeeDate=" + employeeDate + "&departmentName=" + departmentName,
+            type: "PUT",
+            success: function(name) {
+                document.getElementById("info").innerHTML="Record was updated successfully";
             }
         });
     }
@@ -46,15 +55,14 @@ function update_department(id, name, rowid) {
     function validateDepName() {
         if (!rg_name.test($("#departmentName").val())) {
             document.getElementById("dNameErr").innerHTML = "Invalid name, should contain only latin at least 3 characters";
-            return false;
         } else {
             $("#dNameErr").html("");
-            return true;
+            update_department(document.getElementById('departmentId').value, document.getElementById('departmentName').value);
         }
     }
 
     function validateDate() {
-        if (!rg_name.test($("#employeeDate").val())) {
+        if (!rg_date.test($("#employeeDate").val())) {
             document.getElementById("eDateErr").innerHTML = "Invalid date, should have format 2000-10-10";
             return false;
         } else {
@@ -68,10 +76,8 @@ function update_department(id, name, rowid) {
                 document.getElementById("eEmailErr").innerHTML = "Invalid email. Valid e-mail should contain only latin letters, numbers, '@' and '.'";
                 return false;
         } else {
-            {
-                $("#eEmailErr").html("");
-                return true;
-            }
+            $("#eEmailErr").html("");
+            return true;
         }
     }
 

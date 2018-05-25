@@ -1,0 +1,6 @@
+ERROR  : 11:01:52: Error: Error connecting to the server: could not translate host name "locahost" to address: Name or service not known
+
+ERROR  : 11:02:03: Error: Error connecting to the server: fe_sendauth: no password supplied
+
+ERROR  : 11:02:05: Error: Error connecting to the server: fe_sendauth: no password supplied
+

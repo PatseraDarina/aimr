@@ -5,6 +5,7 @@
     <meta http-equiv="Cache-control" content="no-cache">
     <meta http-equiv="Pragma" content="no-cache">
     <meta http-equiv="Expires" content="-1">
+    <script src="js/jquery.min.js"></script>
     <script src="/js/main.js"></script>
 
     <link href="<c:url value="/css/view_style.css" />" rel="stylesheet">
@@ -19,7 +20,7 @@
     <div class="row">
         <div class="col-md-12">
             <h3>Departments</h3>
-                <a href = "showDepartment?isAdd=true" target="_blank"><button style="border-radius: 5px"><img src="/img/icon.png" height="42" width="42"></button></a>
+                <a href = "showDepartments?isAdd=true" target="_blank"><button style="border-radius: 5px"><img src="/img/icon.png" height="42" width="42"></button></a>
                 <div class="table-responsive">
                 <table id="department_table" class="table table-bordred table-striped">
                     <thead>
@@ -31,7 +32,6 @@
                     </thead>
 
                     <tbody>
-
                 <c:forEach var="dep" items="${departments}">
                     <tr>
                         <td style="visibility: hidden"><c:out value="${dep.id}"/></td>
@@ -39,13 +39,12 @@
                         <td><p data-placement="top" data-toggle="tooltip" title="List">
                              <a href="employee?departmentId=${dep.id}" target="_blank"><button class="btn btn-primary btn-xs" data-title="List">Employee</span></button></a>
                           </p></td>
-                        <td><p data-placement="top" data-toggle="tooltip" title="Edit"><a href="/showDepartment?departmentId=${dep.id}&departmentName=${dep.name}" target="_blank"><button class="btn btn-primary btn-xs" data-title="Edit"><span class="glyphicon glyphicon-pencil"></span></button></a></p></td>
+                        <td><p data-placement="top" data-toggle="tooltip" title="Edit"><a href="/showDepartments?departmentId=${dep.id}&departmentName=${dep.name}&rowId=${count}" target="_blank"><button class="btn btn-primary btn-xs" data-title="Edit"><span class="glyphicon glyphicon-pencil"></span></button></a></p></td>
                         <td><p data-placement="top" data-toggle="tooltip" title="Delete"><button class="btn btn-danger btn-xs" data-title="Delete" data-toggle="modal" data-target="#delete" ><span class="glyphicon glyphicon-trash"></span></button></p></td>
                     </tr>
                 </c:forEach>
                     </tbody>
                 </table>
-                <div class="clearfix"></div>
             </div>
 
         </div>

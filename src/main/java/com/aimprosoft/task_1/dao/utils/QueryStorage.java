@@ -7,9 +7,9 @@ public final class QueryStorage {
     }
 
     public static class Employee {
-        public static final String CREATE = "INSERT INTO employee (NAME, EMAIL, DATE, IDDEPARTMENT) VALUES (?, ?, ?, ?)";
+        public static final String CREATE = "INSERT INTO employee (NAME, SALARY, EMAIL, DATE, IDDEPARTMENT) VALUES (?, ?, ?, ?, ?)";
         public static final String READ = "ELECT * FROM employee WHERE ID=?";
-        public static final String UPDATE = "UPDATE employee SET NAME = ?, EMAIL = ?, DATE = ? IDDEPARTMENT  = ? WHERE ID = ?";
+        public static final String UPDATE = "UPDATE employee SET NAME = ?, SALARY = ?, EMAIL = ?, DATE = ? IDDEPARTMENT  = ? WHERE ID = ?";
         public static final String DELETE = "DELETE FROM employee WHERE ID=?";
         public static final String READ_ALL = "SELECT * FROM employee";
         public static final String READ_ALL_BY_DEPARTMENT = "SELECT * FROM employee WHERE IDDEPARTMENT = ?";
@@ -18,7 +18,7 @@ public final class QueryStorage {
 
     public static class Department {
         public static final String CREATE = "INSERT INTO department (NAME) VALUES (?)";
-        public static final String READ = "SELECT * ROM department WHERE ID=?";
+        public static final String READ = "SELECT * FROM department WHERE ID=?";
         public static final String UPDATE = "UPDATE department SET NAME = ? WHERE ID = ?";
         public static final String DELETE = "DELETE FROM department WHERE ID=?";
         public static final String READ_ALL = "SELECT * FROM department";

@@ -2,6 +2,7 @@ package com.aimprosoft.task_1.transaction;
 
 import com.aimprosoft.task_1.exception.TransactionInterruptedException;
 import com.aimprosoft.task_1.utils.Constant;
+import org.apache.log4j.Logger;
 
 import javax.sql.DataSource;
 import java.sql.Connection;
@@ -10,6 +11,7 @@ import java.util.Objects;
 
 public class TransactionManager {
 
+    private Logger LOGGER = Logger.getLogger(TransactionManager.class);
     private DataSource dataSource;
 
     public TransactionManager(DataSource dataSource) {
@@ -44,7 +46,7 @@ public class TransactionManager {
                     connection.close();
                 }
             } catch (SQLException e) {
-                e.printStackTrace();
+                LOGGER.warn(e.getMessage(), e);
             }
         }
         throw new TransactionInterruptedException(exceptionMessage);

@@ -2,6 +2,7 @@
 /home/dpatsera/IdeaProjects/task_1/src/main/java/com/aimprosoft/task_1/exception/DataUniquenessException.java
 /home/dpatsera/IdeaProjects/task_1/src/main/java/com/aimprosoft/task_1/controller/ShowDepartmentPage.java
 /home/dpatsera/IdeaProjects/task_1/src/main/java/com/aimprosoft/task_1/dao/parser/impl/DepartmentParser.java
+/home/dpatsera/IdeaProjects/task_1/src/main/java/com/aimprosoft/task_1/controller/ShowEmployeePage.java
 /home/dpatsera/IdeaProjects/task_1/src/main/java/com/aimprosoft/task_1/dao/EmployeeDao.java
 /home/dpatsera/IdeaProjects/task_1/src/main/java/com/aimprosoft/task_1/dao/AbstractEntity.java
 /home/dpatsera/IdeaProjects/task_1/src/main/java/com/aimprosoft/task_1/dao/DepartmentDao.java

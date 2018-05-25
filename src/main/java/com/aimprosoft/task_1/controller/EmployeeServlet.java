@@ -7,6 +7,7 @@ import com.aimprosoft.task_1.service.DepartmentService;
 import com.aimprosoft.task_1.service.EmployeeService;
 import com.aimprosoft.task_1.utils.Constant;
 import com.aimprosoft.task_1.validator.EmployeeValidator;
+import org.apache.log4j.Logger;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -25,6 +26,7 @@ public class EmployeeServlet extends HttpServlet {
     private EmployeeService employeeService;
     private DepartmentService departmentService;
     private EmployeeValidator employeeValidator;
+    private static final Logger LOGGER = Logger.getLogger(EmployeeServlet.class);
 
     @Override
     public void init() {
@@ -55,34 +57,74 @@ public class EmployeeServlet extends HttpServlet {
         if (employeeValidator.validateDate(req.getParameter(Constant.Attribute.EMPLOYEE_DATE))) {
             employee.setDate(Date.valueOf(req.getParameter(Constant.Attribute.EMPLOYEE_DATE)));
         }
+        if (employeeValidator.validateSalary(req.getParameter(Constant.Attribute.EMPLOYEE_SALARY))) {
+            employee.setSalary(Integer.valueOf(req.getParameter(Constant.Attribute.EMPLOYEE_SALARY)));
+        }
         try {
             employee.setIdDepartment(departmentService.getByName(req.getParameter(Constant.Attribute.DEPARTMENT_NAME)).getId());
             Map<String, String> errors = employeeValidator.validate(employee);
             if (errors.isEmpty()) {
                 employeeService.add(employee);
                 session.setAttribute(Constant.Attribute.INFO, Constant.Message.ADD_SUCCESS);
-                resp.sendRedirect(Constant.JSP.ADD_EMPLOYEE);
+                req.getRequestDispatcher(Constant.JSP.ADD_EMPLOYEE).forward(req, resp);
             } else {
                 session.setAttribute(Constant.Attribute.ERRORS, errors);
                 session.setAttribute(Constant.Attribute.EMPLOYEE, employee);
                 session.setAttribute(Constant.Attribute.DEPARTMENT_NAME, req.getParameter(Constant.Attribute.DEPARTMENT_NAME));
-                req.getRequestDispatcher(Constant.JSP.ADD_EMPLOYEE).include(req, resp);
+                req.getRequestDispatcher(Constant.JSP.ADD_EMPLOYEE).forward(req, resp);
                 errors.clear();
             }
         } catch (TransactionInterruptedException e) {
             session.setAttribute(Constant.Attribute.ERROR_MESSAGE, e.getMessage());
             resp.sendRedirect(Constant.JSP.ERROR_PAGE);
+            LOGGER.warn(e.getMessage(), e);
         } catch (DataUniquenessException e) {
             session.setAttribute(Constant.Attribute.INFO, e.getMessage());
             session.setAttribute(Constant.Attribute.EMPLOYEE, employee);
             session.setAttribute(Constant.Attribute.DEPARTMENT_NAME, req.getParameter(Constant.Attribute.DEPARTMENT_NAME));
-            req.getRequestDispatcher(Constant.JSP.ADD_EMPLOYEE).include(req, resp);
+            //resp.sendRedirect(Constant.Attribute.SHOW_EMPLOYEE);
+            req.setAttribute(Constant.Attribute.DEPARTMENT_ID, employee.getIdDepartment());
+            //req.getRequestDispatcher(Constant.Attribute.SHOW_EMPLOYEE).forward(req, resp);
+            LOGGER.warn(e.getMessage(), e);
         }
     }
 
     @Override
     protected void doPut(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        super.doPut(req, resp);
+        HttpSession session = req.getSession(true);
+        Employee employee = new Employee();
+        employee.setName(req.getParameter(Constant.Attribute.EMPLOYEE_NAME));
+        employee.setEmail(req.getParameter(Constant.Attribute.EMPLOYEE_EMAIL));
+        if (employeeValidator.validateDate(req.getParameter(Constant.Attribute.EMPLOYEE_DATE))) {
+            employee.setDate(Date.valueOf(req.getParameter(Constant.Attribute.EMPLOYEE_DATE)));
+        }
+        if (employeeValidator.validateSalary(req.getParameter(Constant.Attribute.EMPLOYEE_SALARY))) {
+            employee.setSalary(Integer.valueOf(req.getParameter(Constant.Attribute.EMPLOYEE_SALARY)));
+        }
+        try {
+            employee.setIdDepartment(departmentService.getByName(req.getParameter(Constant.Attribute.DEPARTMENT_NAME)).getId());
+            Map<String, String> errors = employeeValidator.validate(employee);
+            if (errors.isEmpty()) {
+                employeeService.edit(employee);
+                session.setAttribute(Constant.Attribute.INFO, Constant.Message.UPDATE_SUCCESS);
+                req.getRequestDispatcher(Constant.JSP.ADD_EMPLOYEE).forward(req, resp);
+            } else {
+                session.setAttribute(Constant.Attribute.ERRORS, errors);
+                session.setAttribute(Constant.Attribute.EMPLOYEE, employee);
+                session.setAttribute(Constant.Attribute.DEPARTMENT_NAME, req.getParameter(Constant.Attribute.DEPARTMENT_NAME));
+                req.getRequestDispatcher(Constant.JSP.ADD_EMPLOYEE).forward(req, resp);
+                errors.clear();
+            }
+        } catch (TransactionInterruptedException e) {
+            session.setAttribute(Constant.Attribute.ERROR_MESSAGE, e.getMessage());
+            resp.sendRedirect(Constant.JSP.ERROR_PAGE);
+            LOGGER.warn(e.getMessage(), e);
+        } catch (DataUniquenessException e) {
+            session.setAttribute(Constant.Attribute.INFO, e.getMessage());
+            session.setAttribute(Constant.Attribute.EMPLOYEE, employee);
+            session.setAttribute(Constant.Attribute.DEPARTMENT_NAME, req.getParameter(Constant.Attribute.DEPARTMENT_NAME));
+            LOGGER.warn(e.getMessage(), e);
+        }
     }
 
     @Override
@@ -95,6 +137,9 @@ public class EmployeeServlet extends HttpServlet {
         } catch (TransactionInterruptedException e) {
             session.setAttribute(Constant.Attribute.ERROR_MESSAGE, e.getMessage());
             resp.sendRedirect(Constant.JSP.ERROR_PAGE);
+            LOGGER.warn(e.getMessage(), e);
         }
     }
+
+
 }

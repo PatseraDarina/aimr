@@ -20,30 +20,38 @@
     </noscript>
 
 </head>
-
 <body>
     <div class="container">
         <section>
             <header class="major">
                 <h2>${sessionScope.isAdd ? 'New department' : 'Edit department'}</h2>
             </header>
-                <form name="department-form" id="department-form"  >
+            <c:choose>
+                <c:when test="${sessionScope.isAdd}">
+                 <form name="department-form" id="department-form" method="POST" action = "/department">
                     <div class="row half">
                         <div class="12u">
-                            <input class="text" type="text" name="departmentName" id="departmentName" placeholder="Department Name" value="${empty param.departmentName ? sessionScope.department.name : param.departmentName}"/>
+                            <input class="text" type="text" name="departmentName" id="departmentName" placeholder="Department Name" value="${sessionScope.department.name}"/>
                             <span id="dNameErr"><c:out value="${sessionScope.errors['departmentName']}"/></span>
                         </div>
                     </div>
-                    <c:choose>
-                        <c:when test="${!sessionScope.isAdd}">
-                            <button style = "margin-top: 2%" onsubmit="return validateDepName();" onclick="update_department(document.getElementById('departmentId').value, document.getElementById('departmentName').value, document.getElementById('rowId').value)">Edit</button>
+                        <button style = "margin-top: 2%" onclick="return validateDepName();">Add</button>
+                        <span><c:out value="${sessionScope.info}"/></span>
+                      </form>
                         </c:when>
                     <c:otherwise>
-                            <button form="department-form" style = "margin-top: 2%" onclick="return validateDepName();">Add</button>
+                     <div class="row half">
+                        <div class="12u">
+                            <input class="form-control" type="hidden" name="rowId" id="rowId" value='${param.rowId}'>
+                            <input class="form-control" type="hidden" name="departmentId" id="departmentId" value='${param.departmentId}'>
+                            <input class="text" type="text" name="departmentName" id="departmentName" placeholder="Department Name" value="${param.departmentName}"/>
+                            <span id="dNameErr"><c:out value="${sessionScope.errors['departmentName']}"/></span>
+                        </div>
+                      </div>
+                            <button style = "margin-top: 2%" onclick="return validateDepName();">Edit</button></a>
+                            <span><c:out value="${sessionScope.info}"/></span>
                     </c:otherwise>
                     </c:choose>
-                </form>
-                <span><c:out value="${sessionScope.info}"/></span>
             	<c:remove var="info" scope="session"/>
             	<c:remove var="errors" scope="session"/>
             	<c:remove var="department" scope="session"/>

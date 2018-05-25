@@ -23,9 +23,10 @@ public class EmployeeDaoImpl extends AbstractDao<Employee, Integer> implements E
         String query = QueryStorage.Employee.CREATE;
         PreparedStatement preparedStatement = connection.prepareStatement(query);
         preparedStatement.setString(1, entity.getName());
-        preparedStatement.setString(2, entity.getEmail());
-        preparedStatement.setDate(3, entity.getDate());
-        preparedStatement.setInt(4, entity.getIdDepartment());
+        preparedStatement.setInt(2, entity.getSalary());
+        preparedStatement.setString(3, entity.getEmail());
+        preparedStatement.setDate(4, entity.getDate());
+        preparedStatement.setInt(5, entity.getIdDepartment());
         return preparedStatement;
     }
 

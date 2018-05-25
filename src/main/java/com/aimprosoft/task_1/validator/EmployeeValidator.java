@@ -29,6 +29,14 @@ public class EmployeeValidator {
         }
     }
 
+    public boolean validateSalary(String salary) {
+        if (!Validator.isValidSalary(salary)) {
+            error.put(Constant.Attribute.EMPLOYEE_SALARY, Constant.Message.INVALID_SALARY);
+            return false;
+        }
+        return true;
+    }
+
     public boolean validateDate(String date) {
         if (!Validator.isValidDate(date)) {
             error.put(Constant.Attribute.EMPLOYEE_DATE, Constant.Message.INVALID_DATE);

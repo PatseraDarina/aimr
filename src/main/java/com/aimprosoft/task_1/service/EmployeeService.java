@@ -21,7 +21,7 @@ public class EmployeeService {
     }
 
     public void add(Employee employee) throws TransactionInterruptedException, DataUniquenessException {
-        if (!isExist(employee)) {
+        if (isExist(employee)) {
             transactionManager.doTransaction(connection -> {
                 employeeDao.create(connection, employee);
                 return null;
@@ -34,7 +34,7 @@ public class EmployeeService {
 
     public Employee getById(Integer id) throws TransactionInterruptedException {
         return transactionManager.doTransaction(connection ->
-           employeeDao.read(connection, id)
+                employeeDao.read(connection, id)
         );
     }
 
@@ -45,16 +45,21 @@ public class EmployeeService {
         });
     }
 
-    public void edit(Employee employee) throws TransactionInterruptedException {
-        transactionManager.doTransaction(connection -> {
-            employeeDao.update(connection, employee);
-            return null;
-        });
+    public void edit(Employee employee) throws TransactionInterruptedException, DataUniquenessException {
+        if (isExist(employee)) {
+            transactionManager.doTransaction(connection -> {
+                employeeDao.update(connection, employee);
+                return null;
+            });
+        } else {
+            throw new DataUniquenessException(Constant.Exception.EMPLOYEE_EMAIL);
+        }
+
     }
 
     public List<Employee> getAll() throws TransactionInterruptedException {
         return transactionManager.doTransaction(connection ->
-            employeeDao.readAll(connection)
+                employeeDao.readAll(connection)
         );
     }
 
@@ -64,7 +69,7 @@ public class EmployeeService {
     }
 
     private boolean isExist(Employee employee) throws TransactionInterruptedException {
-        return (Objects.nonNull(transactionManager.doTransaction(connection ->
+        return (!Objects.nonNull(transactionManager.doTransaction(connection ->
                 employeeDao.readByEmail(connection, employee.getEmail())
         )));
     }
