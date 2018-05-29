@@ -31,7 +31,7 @@ function update_department(departmentId, name) {
         $.ajax({
             url: "employee?employeeId=" + id + "&departmentId" + departmentId,
             type: "DELETE",
-            success: function(rowid) {
+            success: function() {
                 document.getElementById("employee_table").deleteRow(rowid);
             }
         });

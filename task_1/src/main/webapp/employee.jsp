@@ -69,7 +69,7 @@
                     <div class="alert alert-danger"><span class="glyphicon glyphicon-warning-sign"></span> Are you sure you want to delete this Record?</div>
 
                     <div class="modal-footer ">
-                        <button type="button" class="btn btn-success" onclick="delete_employee(document.getElementById('employeeId').value, document.getElementById('rowId').value, document.getElementById('departmentId').value)"><span class="glyphicon glyphicon-ok-sign"></span> Yes</button>
+                        <button type="button" class="btn btn-success" onclick="return delete_employee(document.getElementById('employeeId').value, document.getElementById('rowId').value, document.getElementById('departmentId').value)"><span class="glyphicon glyphicon-ok-sign"></span> Yes</button>
                         <button type="button" class="btn btn-default" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> No</button>
                     </div>
                 </form>
