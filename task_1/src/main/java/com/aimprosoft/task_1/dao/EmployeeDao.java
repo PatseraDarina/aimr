@@ -13,4 +13,6 @@ public interface EmployeeDao extends GenericDao<Employee, Integer> {
     List<Employee> readByIdDepartment(Connection connection, Integer idDepartment) throws SQLException;
 
     Employee readByEmail(Connection connection, String email) throws SQLException;
+
+    void deleteByDepartmentId(Connection connection, Integer id) throws SQLException;
 }

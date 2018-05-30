@@ -106,9 +106,9 @@ public class EmployeeServlet extends HttpServlet {
         if (employeeValidator.validateSalary(req.getParameter(Constant.Attribute.EMPLOYEE_SALARY))) {
             employee.setSalary(Integer.valueOf(req.getParameter(Constant.Attribute.EMPLOYEE_SALARY)));
         }
+        Map<String, String> errors = employeeValidator.validate(employee);
         try {
             employee.setIdDepartment(departmentService.getByName(req.getParameter(Constant.Attribute.DEPARTMENT_NAME)).getId());
-            Map<String, String> errors = employeeValidator.validate(employee);
             if (errors.isEmpty()) {
                 employeeService.edit(employee);
                 info = mapper.writerWithDefaultPrettyPrinter().writeValueAsString(Constant.Message.UPDATE_SUCCESS);
@@ -117,7 +117,6 @@ public class EmployeeServlet extends HttpServlet {
                 session.setAttribute(Constant.Attribute.ERRORS, errors);
                 session.setAttribute(Constant.Attribute.EMPLOYEE, employee);
                 session.setAttribute(Constant.Attribute.DEPARTMENT_NAME, req.getParameter(Constant.Attribute.DEPARTMENT_NAME));
-                resp.sendRedirect(Constant.JSP.ADD_EMPLOYEE);
                 errors.clear();
             }
         } catch (TransactionInterruptedException e) {

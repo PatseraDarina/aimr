@@ -13,7 +13,8 @@ public final class QueryStorage {
         public static final String DELETE = "DELETE FROM employee WHERE ID=?";
         public static final String READ_ALL = "SELECT * FROM employee";
         public static final String READ_ALL_BY_DEPARTMENT = "SELECT * FROM employee WHERE IDDEPARTMENT = ?";
-        public static final String READ_BY_EMAIL = "SELECT * FROM employee WHERE EMAIL = ?";;
+        public static final String READ_BY_EMAIL = "SELECT * FROM employee WHERE EMAIL = ?";
+        public static final String DELETE_BY_DEPARTMENT = "DELETE FROM employee WHERE IDDEPARTMENT = ?";
     }
 
     public static class Department {

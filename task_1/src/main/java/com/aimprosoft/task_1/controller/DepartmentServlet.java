@@ -76,7 +76,7 @@ public class DepartmentServlet extends HttpServlet {
     }
 
     @Override
-    protected void doDelete(HttpServletRequest req, HttpServletResponse resp) throws IOException {
+    protected void doDelete(HttpServletRequest req, HttpServletResponse resp) {
         HttpSession session = req.getSession();
         Department department = new Department();
         department.setId(Integer.valueOf(req.getParameter(Constant.Attribute.DEPARTMENT_ID)));
@@ -84,7 +84,6 @@ public class DepartmentServlet extends HttpServlet {
             departmentService.delete(department.getId());
         } catch (TransactionInterruptedException e) {
             session.setAttribute(Constant.Attribute.ERROR_MESSAGE, e.getMessage());
-            resp.sendRedirect(Constant.JSP.ERROR_PAGE);
             LOGGER.warn(e.getMessage(), e);
         }
     }
@@ -106,8 +105,7 @@ public class DepartmentServlet extends HttpServlet {
                 printWriter.write(info);
             } catch (TransactionInterruptedException e) {
                 session.setAttribute(Constant.Attribute.ERROR_MESSAGE, e.getMessage());
-                resp.sendRedirect(Constant.JSP.ERROR_PAGE);
-                //LOGGER.warn(e.getMessage(), e);
+                LOGGER.warn(e.getMessage(), e);
             } catch (DataUniquenessException e) {
                 info = mapper.writerWithDefaultPrettyPrinter().writeValueAsString(e.getMessage());
                 printWriter.write(info);

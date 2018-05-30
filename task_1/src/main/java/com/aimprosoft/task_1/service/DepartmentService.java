@@ -2,6 +2,7 @@ package com.aimprosoft.task_1.service;
 
 import com.aimprosoft.task_1.bean.Department;
 import com.aimprosoft.task_1.dao.DepartmentDao;
+import com.aimprosoft.task_1.dao.EmployeeDao;
 import com.aimprosoft.task_1.exception.DataUniquenessException;
 import com.aimprosoft.task_1.exception.TransactionInterruptedException;
 import com.aimprosoft.task_1.transaction.TransactionManager;
@@ -14,10 +15,12 @@ public class DepartmentService {
 
     private TransactionManager transactionManager;
     private DepartmentDao departmentDao;
+    private EmployeeDao employeeDao;
 
-    public DepartmentService(TransactionManager transactionManager, DepartmentDao departmentDao) {
+    public DepartmentService(TransactionManager transactionManager, DepartmentDao departmentDao, EmployeeDao employeeDao) {
         this.transactionManager = transactionManager;
         this.departmentDao = departmentDao;
+        this.employeeDao = employeeDao;
     }
 
     public List<Department> getAll() throws TransactionInterruptedException {
@@ -37,6 +40,7 @@ public class DepartmentService {
 
     public void delete(Integer id) throws TransactionInterruptedException {
         transactionManager.doTransaction(connection -> {
+            employeeDao.deleteByDepartmentId(connection, id);
             departmentDao.delete(connection, id);
             return null;
         });

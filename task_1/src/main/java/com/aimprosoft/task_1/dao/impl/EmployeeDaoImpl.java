@@ -69,15 +69,27 @@ public class EmployeeDaoImpl extends AbstractDao<Employee, Integer> implements E
 
     @Override
     public List<Employee> readByIdDepartment(Connection connection, Integer idDepartment) throws SQLException {
-        PreparedStatement preparedStatement = prepareReadByIdDepartment(connection);
-        preparedStatement.setInt(1, idDepartment);
-       return resultSetParser.getObjectList(preparedStatement.executeQuery());
+        PreparedStatement preparedStatement = prepareReadByIdDepartment(connection, idDepartment);
+        return resultSetParser.getObjectList(preparedStatement.executeQuery());
     }
 
     @Override
     public Employee readByEmail(Connection connection, String email) throws SQLException {
         PreparedStatement preparedStatement = prepareReadByEmailQuery(connection, email);
         return resultSetParser.getObject(preparedStatement.executeQuery());
+    }
+
+    @Override
+    public void deleteByDepartmentId(Connection connection, Integer id) throws SQLException {
+        PreparedStatement preparedStatement = prepareDeleteByDepartmentQuery(connection, id);
+        preparedStatement.executeUpdate();
+    }
+
+    private PreparedStatement prepareDeleteByDepartmentQuery(Connection connection, Integer id) throws SQLException {
+        String query = QueryStorage.Employee.DELETE_BY_DEPARTMENT;
+        PreparedStatement preparedStatement = connection.prepareStatement(query);
+        preparedStatement.setInt(1, id);
+        return preparedStatement;
     }
 
     private PreparedStatement prepareReadByEmailQuery(Connection connection, String email) throws SQLException {
@@ -87,9 +99,11 @@ public class EmployeeDaoImpl extends AbstractDao<Employee, Integer> implements E
         return preparedStatement;
     }
 
-    private PreparedStatement prepareReadByIdDepartment(Connection connection) throws SQLException {
+    private PreparedStatement prepareReadByIdDepartment(Connection connection, Integer idDepartment) throws SQLException {
         String query = QueryStorage.Employee.READ_ALL_BY_DEPARTMENT;
-        return connection.prepareStatement(query);
+        PreparedStatement preparedStatement = connection.prepareStatement(query);
+        preparedStatement.setInt(1, idDepartment);
+        return preparedStatement;
     }
 
     private PreparedStatement prepareReadAll(Connection connection) throws SQLException {

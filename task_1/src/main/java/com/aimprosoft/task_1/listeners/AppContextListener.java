@@ -31,10 +31,12 @@ public class AppContextListener implements ServletContextListener {
     private ServletContext servletContext;
     private DataSource dataSource;
     private TransactionManager transactionManager;
+    private EmployeeDao employeeDao;
 
     @Override
     public void contextInitialized(ServletContextEvent sce) {
         servletContext = sce.getServletContext();
+        initEmployeeDao();
         initDataSource();
         initTransactionManager();
         initService();
@@ -60,8 +62,6 @@ public class AppContextListener implements ServletContextListener {
     }
 
     private void initEmployeeService() {
-        ResultSetParser<Employee> resultSetParser = new EmployeeParser();
-        EmployeeDao employeeDao = new EmployeeDaoImpl(resultSetParser);
         EmployeeService employeeService = new EmployeeService(transactionManager, employeeDao);
         servletContext.setAttribute(Constant.Attribute.EMPLOYEE_SERVICE, employeeService);
 
@@ -71,12 +71,17 @@ public class AppContextListener implements ServletContextListener {
 
     private void initDepartmentService() {
         ResultSetParser<Department> resultSetParser = new DepartmentParser();
-        DepartmentDao departmentDao= new DepartmentDaoImpl(resultSetParser);
-        DepartmentService departmentService = new DepartmentService(transactionManager, departmentDao);
+        DepartmentDao departmentDao = new DepartmentDaoImpl(resultSetParser);
+        DepartmentService departmentService = new DepartmentService(transactionManager, departmentDao, employeeDao);
         servletContext.setAttribute(Constant.Attribute.DEPARTMENT_SERVICE, departmentService);
 
         DepartmentValidator departmentValidator = new DepartmentValidator();
         servletContext.setAttribute(Constant.Attribute.DEPARTMENT_VALIDATOR, departmentValidator);
+    }
+
+    private void initEmployeeDao() {
+        ResultSetParser<Employee> resultSetParser = new EmployeeParser();
+        employeeDao = new EmployeeDaoImpl(resultSetParser);
     }
 
 }

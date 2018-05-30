@@ -7,6 +7,7 @@ function delete_department(id, rowid) {
         url: "department?departmentId=" + id,
         type: "DELETE",
         success: function() {
+            document.getElementById("employee_table").clear();
             document.getElementById("department_table").deleteRow(rowid);
         }
     });
@@ -46,8 +47,8 @@ function update_department(departmentId, name) {
                     $("#info").html(result)
                 }
             });
-    }  else {
-              $("#info").html("");
+    } else {
+            $("#info").html("");
                return false;
           }
     }
@@ -74,7 +75,7 @@ function update_department(departmentId, name) {
 
     function validateDate() {
         if (!rg_date.test($("#employeeDate").val())) {
-            document.getElementById("eDateErr").innerHTML = "Invalid date, should have format 10-10-2000";
+            document.getElementById("eDateErr").innerHTML = "Invalid date, should have format 10/10/2000";
             return false;
         } else {
             $("#eDateErr").html("");
